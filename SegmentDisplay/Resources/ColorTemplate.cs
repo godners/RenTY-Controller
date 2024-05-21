@@ -1,6 +1,7 @@
 ﻿// Ignore Spelling: RTYC
 
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace RTYC.SegmentDisplay
@@ -22,45 +23,27 @@ namespace RTYC.SegmentDisplay
 			/// <summary>Orange and Black</summary>
 			Orange = 4
 		}
-		private static Color RGB (Int32 R, Int32 G, Int32 B) => Color.FromArgb(R, G, B);
-		/// <summary>Segment ON Color</summary><param name="Name"></param><returns></returns>
-		public static Color TemplateOn (TemplateName Name)
+		/// <summary>State</summary>
+		internal enum ColorType
 		{
-			switch (Name)
-			{
-				case TemplateName.Black: return RGB(9, 9, 9);
-				case TemplateName.White: return RGB(255, 255, 255);
-				case TemplateName.Red: return RGB(255, 44, 15);
-				case TemplateName.Green: return RGB(36, 221, 34);
-				case TemplateName.Orange: return RGB(233, 93, 15);
-				default: return Color.Empty;
-			}
+			/// <summary>Segment ON</summary>
+			ON = 0,
+			/// <summary>Segment OFF</summary>
+			OFF = 1,
+			/// <summary>Ground</summary>
+			Ground = 2
 		}
-		/// <summary>Segment OFF Color</summary><param name="Name"></param><returns></returns>
-		public static Color TemplateOff (TemplateName Name)
+		private static readonly Dictionary<TemplateName, Int32[][]> TemplateValue = new Dictionary<TemplateName, Int32[][]>
 		{
-			switch (Name)
-			{
-				case TemplateName.Black: return RGB(200, 200, 200);
-				case TemplateName.White: return RGB(59, 59, 59);
-				case TemplateName.Red: return RGB(99, 55, 5);
-				case TemplateName.Green: return RGB(27, 65, 5);
-				case TemplateName.Orange: return RGB(75, 30, 5);
-				default: return Color.Empty;
-			}
-		}
-		/// <summary>Ground Color</summary><param name="Name"></param><returns></returns>
-		public static Color TemplateGround (TemplateName Name)
-		{
-			switch (Name)
-			{
-				case TemplateName.Black: return RGB(226, 226, 226);
-				case TemplateName.White: return RGB(36, 30, 30);
-				case TemplateName.Red: return RGB(36, 30, 30);
-				case TemplateName.Green: return RGB(36, 30, 30);
-				case TemplateName.Orange: return RGB(36, 30, 30);
-				default: return Color.Empty;
-			}
-		}
+			{ TemplateName.Black, new Int32[][] { new Int32[] { 9,9,9 }, new Int32[] { 200, 200, 200 }, new Int32[] { 226, 226, 226 } } },
+			{ TemplateName.White, new Int32[][] { new Int32[] { 255, 255, 255 }, new Int32[] { 59, 59, 59 }, new Int32[] { 30, 30, 30 } } },
+			{ TemplateName.Red, new Int32[][] { new Int32[] { 225, 44, 15 }, new Int32[] { 99, 55, 5 }, new Int32[] { 36, 30, 30 } } },
+			{ TemplateName.Green, new Int32[][] { new Int32[] { 36, 221, 34 }, new Int32[] { 27, 65, 5 }, new Int32[] { 36, 30, 30 } } },
+			{ TemplateName.Orange, new Int32[][] { new Int32[] { 233, 93, 15 }, new Int32[] { 75, 30, 5 }, new Int32[] {36, 30, 30 } } }
+		};		
+		private static Color RGB (Int32[] V) => Color.FromArgb(V[0], V[1], V[2]);
+		internal static Color Value (TemplateName Name, ColorType State) => RGB(TemplateValue[Name][(Int32)State]);
+		internal static Dictionary<ColorType, Color> GetColors (TemplateName Name) => new Dictionary<ColorType, Color>
+		{ { ColorType.ON, Value(Name, ColorType.ON) }, { ColorType.ON, Value(Name, ColorType.ON) }, { ColorType.ON, Value(Name, ColorType.ON) } };////////////
 	}
 }

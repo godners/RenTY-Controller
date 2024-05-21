@@ -3,7 +3,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using static RTYC.SegmentDisplay.CharDefine;
+using static RTYC.SegmentDisplay.SegmentDisplayStyle;
 
 namespace RTYC.SegmentDisplay
 {

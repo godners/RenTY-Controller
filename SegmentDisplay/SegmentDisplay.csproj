@@ -36,11 +36,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Resources\CharDefine.cs" />
+    <Compile Include="Resources\SegmentDisplayStyle.cs" />
     <Compile Include="Nine\Nine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -66,6 +68,18 @@
     <Compile Include="Eight\Eight.Designer.cs">
       <DependentUpon>Eight.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\SegmentDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\SegmentDisplay.Designer.cs">
+      <DependentUpon>SegmentDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SegmentDisplay.Parameter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\SegmentDisplay.Segment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Seven\Seven.Segment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nine\Nine.resx">
       <DependentUpon>Nine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SegmentDisplay.resx">
+      <DependentUpon>SegmentDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seven\Seven.resx">
       <DependentUpon>Seven.cs</DependentUpon>

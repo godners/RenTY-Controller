@@ -29,7 +29,7 @@ namespace RTYC.SegmentDisplay
 		public Color GroundColor { get => BackColor; set { BackColor = value; DrawAll();} }
 		/// <summary>Set Color as Template</summary><param name="Name"></param>
 		public void SetColor (TemplateName Name)
-		{ OnColor = TemplateOn(Name); OffColor = TemplateOff(Name); GroundColor = TemplateGround(Name); DrawAll();}
+		{ OnColor = Value(Name, ColorType.ON); OffColor = Value(Name, ColorType.OFF); GroundColor = Value(Name, ColorType.Ground); DrawAll(); }
 		/// <summary>Set Color as 3 Colors</summary><param name="ON"></param><param name="OFF"></param><param name="Ground"></param>
 		public void SetColor (Color ON, Color OFF, Color Ground) { OnColor = ON; OffColor = OFF; GroundColor = Ground; DrawAll();}
 		private Color RGB (Int32 R, Int32 G, Int32 B) => Color.FromArgb(R, G, B);

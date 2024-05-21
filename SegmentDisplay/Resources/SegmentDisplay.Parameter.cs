@@ -7,26 +7,27 @@ using static RTYC.SegmentDisplay.ColorTemplate;
 
 namespace RTYC.SegmentDisplay
 {
-	public partial class Seven : UserControl
+	public abstract partial class SegmentDisplay : UserControl
 	{
-		private void Seven_LockedParameters (object o, EventArgs e)
+		private readonly Font LockedFont = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+		private readonly Padding LockedPadding = new Padding(0);
+		private void Property ()
 		{
 			Padding = LockedPadding; AutoSize = false; ImeMode = ImeMode.Disable; AutoValidate = AutoValidate.Disable;
 			Cursor = DefaultCursor; Font = LockedFont; RightToLeft = RightToLeft.No; CausesValidation = false;
 		}
-		private const Double Aspect = 0.6D;
-		private void Seven_Resize (object o, EventArgs e)
-		{
-			Size = Width / Height > Aspect ? new Size(Convert.ToInt32(Height * Aspect), Height) :
-				new Size(Width, Convert.ToInt32(Width / Aspect)); DrawAll();
-		}
+		private void Property (Object O, EventArgs E) => Property();
+		private protected abstract Single Aspect { get; }
+		private void LockAspect ()
+		{ Size = (Width / Height > Aspect ? new SizeF(Height * Aspect, Height) : new SizeF(Width, Width / Aspect)).ToSize(); DrawAll(); }
+		private void LockAspect (Object O, EventArgs E) => LockAspect();
 		/// <summary>Segment ON Color</summary>
 		public Color OnColor { get => ForeColor; set { ForeColor = value; DrawAll(); } }
 		private Color OffColor_P;
 		/// <summary>Segment OFF Color</summary>
 		public Color OffColor { get => OffColor_P; set { OffColor_P = value; DrawAll(); } }
 		/// <summary>Background Color</summary>
-		public Color GroundColor { get => BackColor; set { BackColor = value; DrawAll(); } }		
+		public Color GroundColor { get => BackColor; set { BackColor = value; DrawAll(); } }
 		/// <summary>Set Color as Template</summary><param name="Name"></param>
 		public void SetColor (TemplateName Name)
 		{ OnColor = Value(Name, ColorType.ON); OffColor = Value(Name, ColorType.OFF); GroundColor = Value(Name, ColorType.Ground); DrawAll(); }
