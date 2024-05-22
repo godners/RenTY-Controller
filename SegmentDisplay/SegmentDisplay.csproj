@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fourteen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Fourteen.Designer.cs">
+      <DependentUpon>Fourteen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\SegmentDisplayStyle.cs" />
     <Compile Include="Nine\Nine.cs">
       <SubType>UserControl</SubType>

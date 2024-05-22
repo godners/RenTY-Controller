@@ -39,6 +39,8 @@ namespace RTYC.SegmentDisplay
 		/// <summary>Word Style</summary>
 		public enum WordStyle
 		{ 
+			/// <summary>None</summary>
+			None = 0,
 			/// <summary>Space</summary>
 			Space = 32,
 			/// <summary>Exclamatory - !</summary>
@@ -230,7 +232,7 @@ namespace RTYC.SegmentDisplay
 			/// <summary>Tilde - ~</summary>
 			Tilde = 126
 		}
-		/// <summary>Dot Dtyle</summary>
+		/// <summary>Dot Style</summary>
 		public enum DotStyle
 		{
 			/// <summary>None</summary>

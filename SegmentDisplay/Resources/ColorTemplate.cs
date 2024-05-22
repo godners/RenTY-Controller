@@ -40,10 +40,8 @@ namespace RTYC.SegmentDisplay
 			{ TemplateName.Red, new Int32[][] { new Int32[] { 225, 44, 15 }, new Int32[] { 99, 55, 5 }, new Int32[] { 36, 30, 30 } } },
 			{ TemplateName.Green, new Int32[][] { new Int32[] { 36, 221, 34 }, new Int32[] { 27, 65, 5 }, new Int32[] { 36, 30, 30 } } },
 			{ TemplateName.Orange, new Int32[][] { new Int32[] { 233, 93, 15 }, new Int32[] { 75, 30, 5 }, new Int32[] {36, 30, 30 } } }
-		};		
+		};
 		private static Color RGB (Int32[] V) => Color.FromArgb(V[0], V[1], V[2]);
 		internal static Color Value (TemplateName Name, ColorType State) => RGB(TemplateValue[Name][(Int32)State]);
-		internal static Dictionary<ColorType, Color> GetColors (TemplateName Name) => new Dictionary<ColorType, Color>
-		{ { ColorType.ON, Value(Name, ColorType.ON) }, { ColorType.ON, Value(Name, ColorType.ON) }, { ColorType.ON, Value(Name, ColorType.ON) } };////////////
 	}
 }

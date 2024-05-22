@@ -9,12 +9,12 @@ namespace RTYC.SegmentDisplay
 {
 	public abstract partial class SegmentDisplay : UserControl
 	{
-		private readonly Font LockedFont = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		private readonly Padding LockedPadding = new Padding(0);
+		//private readonly Font LockedFont = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+		//private readonly Padding LockedPadding = new Padding(0);
 		private void Property ()
 		{
-			Padding = LockedPadding; AutoSize = false; ImeMode = ImeMode.Disable; AutoValidate = AutoValidate.Disable;
-			Cursor = DefaultCursor; Font = LockedFont; RightToLeft = RightToLeft.No; CausesValidation = false;
+			Padding = InitPadding; AutoSize = false; ImeMode = ImeMode.Disable; AutoValidate = AutoValidate.Disable;
+			Cursor = DefaultCursor; Font = InitFont; RightToLeft = RightToLeft.No; CausesValidation = false;
 		}
 		private void Property (Object O, EventArgs E) => Property();
 		private protected abstract Single Aspect { get; }

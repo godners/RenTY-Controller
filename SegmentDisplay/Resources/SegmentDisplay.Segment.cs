@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using static System.Math;
 using static RTYC.SegmentDisplay.SegmentDisplayStyle;
@@ -10,26 +11,27 @@ using static RTYC.SegmentDisplay.SegmentDisplayStyle;
 namespace RTYC.SegmentDisplay
 {
 	public abstract partial class SegmentDisplay : UserControl
-	{		
-		private Single Scope => Height / 200F;
-		private PointF P (Single X, Single Y) => new PointF(X * Scope, Y * Scope);
+	{
+		private protected Single Scope => Height / 200F;
+		private protected PointF P (Single X, Single Y) => new PointF(X * Scope, Y * Scope);
+		private protected PointF[] PS (Single[] Ss)
+		{ List<PointF> Pl = new List<PointF> (); for (Int32 I = 0; I < Ss.Length; I += 2) Pl.Add(new PointF(Ss[I], Ss[I + 1])); return Pl.ToArray (); }
+		// 能否改成 for (Int32 I = 0; I < Ss.Length;) Pl.Add(new PointF(Ss[I++], Ss[I++]));
+		private protected Region RP (Single[] Ss) { GraphicsPath GP = new GraphicsPath(); GP.AddPolygon(PS(Ss)); return new Region(GP); }
+		private protected readonly Region REmpty = new Region(new Rectangle(0, 0, 0, 0));
 
-
-
-		//private protected Dictionary<UInt16, PointF[]> SegmentPoints;
 		private protected abstract Dictionary<UInt16, Region> SegmentRegion { get; }
 		private UInt16 Pow2 (UInt16 Number) => Convert.ToUInt16(Pow(2, Number));
-		//private void DrawSegmentON (UInt16 Segment) => G.FillPolygon(new SolidBrush(OnColor), SegmentPoints[Segment]);
 		private void DrawSegmentON (UInt16 Segment) => G.FillRegion(new SolidBrush(OnColor), SegmentRegion[Segment]);
-		//private void DrawSegmentOFF (UInt16 Segment) => G.FillPolygon(new SolidBrush(OffColor), SegmentPoints[Segment]);
 		private void DrawSegmentOFF (UInt16 Segment) => G.FillRegion(new SolidBrush(OffColor), SegmentRegion[Segment]);
-		// // //private UInt16 Log2 (UInt16 Number) => Convert.ToByte(Log(Number) / Log(2));		
 		private void DrawSegmentRegion (UInt16 Segments)
 		{ for (UInt16 I = 0; I < 16; I++) if ((Pow2(I) & Segments) > 0) DrawSegmentON(I); else DrawSegmentOFF(I); }
 		/// <summary>Draw Segment</summary><param name="Segments"></param>
 		public void DrawSegment (UInt16 Segments) { ShownSegment = Segments; DrawAll(); }
+		private protected abstract Dictionary<WordStyle, UInt16> WordMapping { get; }
 		/// <summary>Draw Word</summary><param name="Style">Word Style</param>
-		public void DrawWord (WordStyle Style) { }////////////////////////////////
+		public void DrawWord (WordStyle Style) { ShownSegment = WordMapping[Style]; DrawAll(); }
+		private WordStyle SearchWord(UInt16 I) { foreach (WordStyle S in WordMapping.Keys) if (WordMapping[S] == I) return S; return WordStyle.None; }
 
 
 
@@ -40,8 +42,13 @@ namespace RTYC.SegmentDisplay
 		private void DrawSymbolRegion (Byte Symbols) { for (Byte I = 0; I < 8; I++) if ((Pow2(I) & Symbols) > 0) DrawSymbolON(I); else DrawSymbolOFF(I); }
 		/// <summary>Draw Symbol</summary><param name="Symbols"></param>
 		public void DrawSymbol (Byte Symbols) { ShownSymbol = Symbols; DrawAll(); }
+		private protected abstract Dictionary<DotStyle, Byte> DotMapping { get; }
 		/// <summary>Draw Dot</summary><param name="Style">DotStyle</param>
-		public void DrawDot (DotStyle Style) { }////////////////////////////////
+		public void DrawDot (DotStyle Style) { ShownSymbol = DotMapping[Style]; DrawAll(); }
+		private DotStyle SearchDot(Byte B) { foreach (DotStyle S in DotMapping.Keys) if (DotMapping[S] == B) return S; return DotStyle.None; }
+
+
+
 
 
 
@@ -51,6 +58,5 @@ namespace RTYC.SegmentDisplay
 		private void DrawAll (Object O, EventArgs E) => DrawAll();
 		private void DrawAll (Object O, LayoutEventArgs E) => DrawAll();
 		private void DrawAll (Object O, PaintEventArgs E) => DrawAll();
-
 	}
 }
