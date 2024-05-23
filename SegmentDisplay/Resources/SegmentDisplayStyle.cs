@@ -169,7 +169,7 @@ namespace RTYC.SegmentDisplay
 			Caret = 94,
 			/// <summary>Under Line - _</summary>
 			UnderLine = 95,
-			/// <summary>Back Quote</summary>
+			/// <summary>Back Quote - `</summary>
 			BackQuote = 96,
 			/// <summary>Lower Character a - a</summary>
 			a = 97,

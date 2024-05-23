@@ -13,13 +13,15 @@ namespace RTYC.SegmentDisplay
 		private IContainer C = null;
 		/// <summary></summary><param name="D"></param>
 		protected override void Dispose (Boolean D) { if (D && (C != null)) C.Dispose(); base.Dispose(D); }
-		private void InitializeComponent ()
+		private protected abstract Size InitSize { get; }
+		private protected abstract String InitName { get; }
+		private protected virtual void InitializeComponent ()
 		{
 			SuspendLayout(); AutoScaleMode = AutoScaleMode.None; AutoSizeMode = AutoSizeMode.GrowAndShrink; AutoValidate = AutoValidate.Disable;
-			CausesValidation = false; Font = InitFont; ImeMode = ImeMode.Disable; Margin = InitPadding; Name = "SegmentDisplay"; Size = new Size(120, 200);
+			CausesValidation = false; Font = InitFont; ImeMode = ImeMode.Disable; Margin = InitPadding; Name = InitName; Size = InitSize;
 			AutoSizeChanged += EHPT; AutoValidateChanged += EHPT; CausesValidationChanged += EHPT; CursorChanged += EHPT;
-			FontChanged += EHPT; ForeColorChanged += EHDA; LocationChanged += EHDA; RightToLeftChanged += EHPT; Move += EHDA; 
-			SizeChanged += EHDA; VisibleChanged += EHDA; PaddingChanged += EHPT; SystemColorsChanged += EHDA; ImeModeChanged += EHPT;			
+			FontChanged += EHPT; ForeColorChanged += EHDA; LocationChanged += EHDA; RightToLeftChanged += EHPT; Move += EHDA;
+			SizeChanged += EHDA; VisibleChanged += EHDA; PaddingChanged += EHPT; SystemColorsChanged += EHDA; ImeModeChanged += EHPT;
 			BackColorChanged += EHDA; EnabledChanged += EHDA; Load += new EventHandler(SegmentDisplay_Load); Paint += new PaintEventHandler(DrawAll);
 			Layout += new LayoutEventHandler(DrawAll); Resize += new EventHandler(LockAspect); ResumeLayout(false);
 		}

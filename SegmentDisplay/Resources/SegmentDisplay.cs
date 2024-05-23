@@ -19,6 +19,5 @@ namespace RTYC.SegmentDisplay
 		/// <summery>Shown Dot</summery>
 		public DotStyle Dot { get => SearchDot(ShownSymbol); set => DrawDot(value); }
 		private void SegmentDisplay_Load (Object O, EventArgs E) { if (OffColor == Color.Empty) OffColor = base.BackColor; DrawAll(); }
-		
 	}
 }

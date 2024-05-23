@@ -20,15 +20,18 @@ namespace RTYC.Designer
 			this.components = new System.ComponentModel.Container();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
-			this.eight1 = new RTYC.SegmentDisplay.Eight();
-			this.seven1 = new RTYC.SegmentDisplay.Seven();
-			this.nine1 = new RTYC.SegmentDisplay.Nine();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
+			this.button5 = new System.Windows.Forms.Button();
+			this.label4 = new System.Windows.Forms.Label();
+			this.fourteen1 = new RTYC.SegmentDisplay.Fourteen();
+			this.nine1 = new RTYC.SegmentDisplay.Nine();
+			this.eight1 = new RTYC.SegmentDisplay.Eight();
+			this.seven1 = new RTYC.SegmentDisplay.Seven();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -50,66 +53,6 @@ namespace RTYC.Designer
 			this.button2.Text = "Next Eight";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.Button2_Click);
-			// 
-			// eight1
-			// 
-			this.eight1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.eight1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.eight1.BackColor = System.Drawing.SystemColors.Control;
-			this.eight1.CausesValidation = false;
-			this.eight1.DotON = false;
-			this.eight1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.eight1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.eight1.GroundColor = System.Drawing.SystemColors.Control;
-			this.eight1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.eight1.Location = new System.Drawing.Point(226, 49);
-			this.eight1.Margin = new System.Windows.Forms.Padding(0);
-			this.eight1.Name = "eight1";
-			this.eight1.OffColor = System.Drawing.SystemColors.Control;
-			this.eight1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.eight1.Size = new System.Drawing.Size(150, 200);
-			this.eight1.TabIndex = 2;
-			this.eight1.Word = ' ';
-			// 
-			// seven1
-			// 
-			this.seven1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.seven1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.seven1.BackColor = System.Drawing.SystemColors.Control;
-			this.seven1.CausesValidation = false;
-			this.seven1.Cursor = System.Windows.Forms.Cursors.Default;
-			this.seven1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.seven1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.seven1.GroundColor = System.Drawing.SystemColors.Control;
-			this.seven1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.seven1.Location = new System.Drawing.Point(21, 49);
-			this.seven1.Margin = new System.Windows.Forms.Padding(0);
-			this.seven1.Name = "seven1";
-			this.seven1.OffColor = System.Drawing.Color.Empty;
-			this.seven1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.seven1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.seven1.Size = new System.Drawing.Size(120, 200);
-			this.seven1.TabIndex = 0;
-			this.seven1.Word = ' ';
-			// 
-			// nine1
-			// 
-			this.nine1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.nine1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.nine1.BackColor = System.Drawing.SystemColors.Control;
-			this.nine1.CausesValidation = false;
-			this.nine1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.nine1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.nine1.GroundColor = System.Drawing.SystemColors.Control;
-			this.nine1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.nine1.Location = new System.Drawing.Point(434, 49);
-			this.nine1.Margin = new System.Windows.Forms.Padding(0);
-			this.nine1.Name = "nine1";
-			this.nine1.OffColor = System.Drawing.Color.Empty;
-			this.nine1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.nine1.Size = new System.Drawing.Size(120, 200);
-			this.nine1.TabIndex = 4;
-			this.nine1.Word = ' ';
 			// 
 			// button3
 			// 
@@ -163,11 +106,113 @@ namespace RTYC.Designer
 			this.label3.TabIndex = 9;
 			this.label3.Text = "label3";
 			// 
+			// button5
+			// 
+			this.button5.Location = new System.Drawing.Point(647, 325);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(75, 23);
+			this.button5.TabIndex = 11;
+			this.button5.Text = "Next 14";
+			this.button5.UseVisualStyleBackColor = true;
+			this.button5.Click += new System.EventHandler(this.Button5_Click);
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(645, 310);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(41, 12);
+			this.label4.TabIndex = 12;
+			this.label4.Text = "label4";
+			// 
+			// fourteen1
+			// 
+			this.fourteen1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.fourteen1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.fourteen1.BackColor = System.Drawing.SystemColors.Control;
+			this.fourteen1.CausesValidation = false;
+			this.fourteen1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.fourteen1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.fourteen1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.fourteen1.GroundColor = System.Drawing.SystemColors.Control;
+			this.fourteen1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.fourteen1.Location = new System.Drawing.Point(626, 49);
+			this.fourteen1.Margin = new System.Windows.Forms.Padding(0);
+			this.fourteen1.Name = "fourteen1";
+			this.fourteen1.OffColor = System.Drawing.SystemColors.Control;
+			this.fourteen1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.fourteen1.Size = new System.Drawing.Size(150, 200);
+			this.fourteen1.TabIndex = 10;
+			this.fourteen1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
+			// 
+			// nine1
+			// 
+			this.nine1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.nine1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.nine1.BackColor = System.Drawing.SystemColors.Control;
+			this.nine1.CausesValidation = false;
+			this.nine1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nine1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.nine1.GroundColor = System.Drawing.SystemColors.Control;
+			this.nine1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.nine1.Location = new System.Drawing.Point(434, 49);
+			this.nine1.Margin = new System.Windows.Forms.Padding(0);
+			this.nine1.Name = "nine1";
+			this.nine1.OffColor = System.Drawing.Color.Empty;
+			this.nine1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.nine1.Size = new System.Drawing.Size(120, 200);
+			this.nine1.TabIndex = 4;
+			this.nine1.Word = ' ';
+			// 
+			// eight1
+			// 
+			this.eight1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.eight1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.eight1.BackColor = System.Drawing.SystemColors.Control;
+			this.eight1.CausesValidation = false;
+			this.eight1.DotON = false;
+			this.eight1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.eight1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.eight1.GroundColor = System.Drawing.SystemColors.Control;
+			this.eight1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.eight1.Location = new System.Drawing.Point(226, 49);
+			this.eight1.Margin = new System.Windows.Forms.Padding(0);
+			this.eight1.Name = "eight1";
+			this.eight1.OffColor = System.Drawing.SystemColors.Control;
+			this.eight1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.eight1.Size = new System.Drawing.Size(150, 200);
+			this.eight1.TabIndex = 2;
+			this.eight1.Word = ' ';
+			// 
+			// seven1
+			// 
+			this.seven1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.seven1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.seven1.BackColor = System.Drawing.SystemColors.Control;
+			this.seven1.CausesValidation = false;
+			this.seven1.Cursor = System.Windows.Forms.Cursors.Default;
+			this.seven1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.seven1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.seven1.GroundColor = System.Drawing.SystemColors.Control;
+			this.seven1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.seven1.Location = new System.Drawing.Point(21, 49);
+			this.seven1.Margin = new System.Windows.Forms.Padding(0);
+			this.seven1.Name = "seven1";
+			this.seven1.OffColor = System.Drawing.Color.Empty;
+			this.seven1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.seven1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.seven1.Size = new System.Drawing.Size(120, 200);
+			this.seven1.TabIndex = 0;
+			this.seven1.Word = ' ';
+			// 
 			// WinMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.button5);
+			this.Controls.Add(this.fourteen1);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -200,6 +245,9 @@ namespace RTYC.Designer
 		private Label label1;
 		private Label label2;
 		private Label label3;
+		private SegmentDisplay.Fourteen fourteen1;
+		private Button button5;
+		private Label label4;
 	}
 }
 

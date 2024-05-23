@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static RTYC.SegmentDisplay.ColorTemplate;
+using static RTYC.SegmentDisplay.SegmentDisplayStyle;
+
 namespace RTYC.Designer
 {
 	public partial class WinMain : Form
@@ -23,6 +25,7 @@ namespace RTYC.Designer
 			seven1.SetColor(TemplateName.Red);
 			eight1.SetColor(TemplateName.Green);
 			nine1.SetColor(TemplateName.Orange);
+			fourteen1.SetColor(TemplateName.Black);
 		}
 		private readonly Char[] DigitChar = new Char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' ' };
 		Int32 SD7 = 0;
@@ -36,8 +39,12 @@ namespace RTYC.Designer
 		private void NextNine () { nine1.DrawChar(DigitChar[SD9 % DigitChar.Length]); label3.Text = DigitChar[SD9++ % DigitChar.Length].ToString(); }
 		private void Button3_Click (object sender, EventArgs e) => NextNine();
 
+		Int32 SD14 = 97;
 		
-
+		private void Button5_Click (object sender, EventArgs e)
+		{
+			fourteen1.DrawWord((WordStyle)SD14++);
+		}
 
 
 
@@ -55,6 +62,6 @@ namespace RTYC.Designer
 		private void Timer1_Tick (object sender, EventArgs e) => NextAll(); 
 		private void Button4_Click (object sender, EventArgs e) => timer1.Enabled = !timer1.Enabled;
 
-		
+
 	}
 }

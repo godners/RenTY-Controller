@@ -9,8 +9,7 @@ namespace RTYC.SegmentDisplay
 {
 	public abstract partial class SegmentDisplay : UserControl
 	{
-		//private readonly Font LockedFont = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-		//private readonly Padding LockedPadding = new Padding(0);
+		#region Region - Display Control Function
 		private void Property ()
 		{
 			Padding = InitPadding; AutoSize = false; ImeMode = ImeMode.Disable; AutoValidate = AutoValidate.Disable;
@@ -21,6 +20,8 @@ namespace RTYC.SegmentDisplay
 		private void LockAspect ()
 		{ Size = (Width / Height > Aspect ? new SizeF(Height * Aspect, Height) : new SizeF(Width, Width / Aspect)).ToSize(); DrawAll(); }
 		private void LockAspect (Object O, EventArgs E) => LockAspect();
+		#endregion
+		#region Region - Color Control Function
 		/// <summary>Segment ON Color</summary>
 		public Color OnColor { get => ForeColor; set { ForeColor = value; DrawAll(); } }
 		private Color OffColor_P;
@@ -40,5 +41,6 @@ namespace RTYC.SegmentDisplay
 		/// <param name="Ground_R"></param><param name="Ground_G"></param><param name="Ground_B"></param>
 		public void SetColor (Int32 ON_R, Int32 ON_G, Int32 ON_B, Int32 OFF_R, Int32 OFF_G, Int32 OFF_B, Int32 Ground_R, Int32 Ground_G, Int32 Ground_B)
 		{ OnColor = RGB(ON_R, ON_G, ON_B); OffColor = RGB(OFF_R, OFF_G, OFF_B); GroundColor = RGB(Ground_R, Ground_G, Ground_B); DrawAll(); }
+		#endregion
 	}
 }
