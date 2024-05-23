@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("RenTY Controller - Segment Display - Seven")]
-[assembly: AssemblyDescription("RenTY Controller - Segment Display - Seven")]
+[assembly: AssemblyTitle("RenTY Controller - Segment Display")]
+[assembly: AssemblyDescription("RenTY Controller - Segment Display")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("RenTY Code")]
-[assembly: AssemblyProduct("RenTY Controller - Segment Display - Seven")]
+[assembly: AssemblyProduct("RenTY Controller - Segment Display")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

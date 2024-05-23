@@ -11,7 +11,7 @@ namespace RTYC.SegmentDisplay
 	public class Fourteen : SegmentDisplay
 	{
 		/// <summary>Initialize Component</summary>
-		public Fourteen () => InitializeComponent();
+		public Fourteen () => base.InitializeComponent();
 		private protected override Single Aspect => 0.75F;
 		private protected override Size InitSize => new Size(150, 200);
 		private protected override string InitName => "FourteenSegmentDisplay";
