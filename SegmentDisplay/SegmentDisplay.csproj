@@ -34,6 +34,9 @@
   <PropertyGroup>
     <ApplicationIcon>RenTY Controller.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -45,7 +48,7 @@
     <Compile Include="Fourteen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\SegmentDisplayStyle.cs" />
+    <Compile Include="SegmentDisplay.Style.cs" />
     <Compile Include="Nine\Nine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,7 +61,7 @@
     <Compile Include="Nine\Nine.Segment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\ColorTemplate.cs" />
+    <Compile Include="ColorTemplate.cs" />
     <Compile Include="Eight\Eight.Parameter.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,29 +74,20 @@
     <Compile Include="Eight\Eight.Designer.cs">
       <DependentUpon>Eight.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\SegmentDisplay.cs">
+    <Compile Include="SegmentDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\SegmentDisplay.Designer.cs">
+    <Compile Include="SegmentDisplay.Designer.cs">
       <DependentUpon>SegmentDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\SegmentDisplay.Parameter.cs">
+    <Compile Include="SegmentDisplay.Parameter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\SegmentDisplay.Segment.cs">
+    <Compile Include="SegmentDisplay.Segment.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Seven\Seven.Segment.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Seven\Seven.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Seven\Seven.Designer.cs">
-      <DependentUpon>Seven.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Seven\Seven.Parameter.cs">
+    <Compile Include="Seven.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
@@ -108,11 +102,8 @@
     <EmbeddedResource Include="Nine\Nine.resx">
       <DependentUpon>Nine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\SegmentDisplay.resx">
+    <EmbeddedResource Include="SegmentDisplay.resx">
       <DependentUpon>SegmentDisplay.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seven\Seven.resx">
-      <DependentUpon>Seven.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

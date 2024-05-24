@@ -28,9 +28,12 @@ namespace RTYC.Designer
 			fourteen1.SetColor(TemplateName.Black);
 		}
 		private readonly Char[] DigitChar = new Char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' ' };
-		Int32 SD7 = 0;
-		private void NextSeven () { seven1.DrawChar(DigitChar[SD7 % DigitChar.Length]); label1.Text = DigitChar[SD7++ % DigitChar.Length].ToString(); }
-		private void Button1_Click (object sender, EventArgs e) => NextSeven();
+		Int32 SD7 = 65;
+		//private void NextSeven () { }//{ seven1.DrawChar(DigitChar[SD7 % DigitChar.Length]); label1.Text = DigitChar[SD7++ % DigitChar.Length].ToString(); }
+		private void Button1_Click (object sender, EventArgs e)
+		{
+			seven1.DrawWord((WordStyle)SD7++);
+		}
 		private void NextEight () { eight1.DrawChar(DigitChar[SD8 % DigitChar.Length]); label2.Text = DigitChar[SD8++ % DigitChar.Length].ToString(); }
 		private void RollEight () => eight1.DotON = !eight1.DotON;
 		Int32 SD8 = 0;
@@ -58,7 +61,7 @@ namespace RTYC.Designer
 
 
 
-		private void NextAll() { NextSeven(); NextEight(); RollEight(); NextNine(); }
+		private void NextAll() { /*NextSeven();*/ NextEight(); RollEight(); NextNine(); }
 		private void Timer1_Tick (object sender, EventArgs e) => NextAll(); 
 		private void Button4_Click (object sender, EventArgs e) => timer1.Enabled = !timer1.Enabled;
 

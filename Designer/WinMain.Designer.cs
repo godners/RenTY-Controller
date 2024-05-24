@@ -188,28 +188,26 @@ namespace RTYC.Designer
 			// 
 			this.seven1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.seven1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.seven1.BackColor = System.Drawing.SystemColors.Control;
 			this.seven1.CausesValidation = false;
-			this.seven1.Cursor = System.Windows.Forms.Cursors.Default;
+			this.seven1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
 			this.seven1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.seven1.ForeColor = System.Drawing.SystemColors.ControlText;
 			this.seven1.GroundColor = System.Drawing.SystemColors.Control;
 			this.seven1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.seven1.Location = new System.Drawing.Point(21, 49);
+			this.seven1.Location = new System.Drawing.Point(25, 49);
 			this.seven1.Margin = new System.Windows.Forms.Padding(0);
 			this.seven1.Name = "seven1";
-			this.seven1.OffColor = System.Drawing.Color.Empty;
+			this.seven1.OffColor = System.Drawing.SystemColors.Control;
 			this.seven1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.seven1.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.seven1.Size = new System.Drawing.Size(120, 200);
-			this.seven1.TabIndex = 0;
-			this.seven1.Word = ' ';
+			this.seven1.TabIndex = 13;
+			this.seven1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
 			// WinMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.seven1);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.button5);
 			this.Controls.Add(this.fourteen1);
@@ -222,7 +220,6 @@ namespace RTYC.Designer
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.eight1);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.seven1);
 			this.Name = "WinMain";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.WinMain_Load);
@@ -232,8 +229,6 @@ namespace RTYC.Designer
 		}
 
 		#endregion
-
-		private RTYC.SegmentDisplay.Seven seven1;
 		private Button button1;
 		private SegmentDisplay.Eight eight1;
 		private Button button2;
@@ -248,6 +243,7 @@ namespace RTYC.Designer
 		private SegmentDisplay.Fourteen fourteen1;
 		private Button button5;
 		private Label label4;
+		private SegmentDisplay.Seven seven1;
 	}
 }
 

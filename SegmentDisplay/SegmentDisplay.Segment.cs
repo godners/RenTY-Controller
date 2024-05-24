@@ -35,12 +35,12 @@ namespace RTYC.SegmentDisplay
 		private WordStyle SearchWord (UInt16 I) { foreach (WordStyle S in WordMapping.Keys) if (WordMapping[S] == I) return S; return WordStyle.None; }
 		#endregion
 		#region Region - Symbol Drawing Function
-		private protected abstract Dictionary<Byte, Region> SymbolRegions { get; }
+		private protected abstract Dictionary<Byte, Region> SymbolRegion { get; }
 		private protected readonly Dictionary<Byte, Region> SREmpty = new Dictionary<byte, Region>
 		{ { 0, REmpty }, { 1, REmpty }, { 2, REmpty }, { 3, REmpty }, { 4, REmpty }, { 5, REmpty }, { 6, REmpty }, { 7, REmpty } };
 		private Byte Pow2 (Byte Number) => Convert.ToByte(Pow(2, Number));
-		private void DrawSymbolON (Byte Symbol) => G.FillRegion(new SolidBrush(OnColor), SymbolRegions[Symbol]);
-		private void DrawSymbolOFF (Byte Symbol) => G.FillRegion(new SolidBrush(OffColor), SymbolRegions[Symbol]);
+		private void DrawSymbolON (Byte Symbol) => G.FillRegion(new SolidBrush(OnColor), SymbolRegion[Symbol]);
+		private void DrawSymbolOFF (Byte Symbol) => G.FillRegion(new SolidBrush(OffColor), SymbolRegion[Symbol]);
 		private void DrawSymbolRegion (Byte Symbols) { for (Byte I = 0; I < 8; I++) if ((Pow2(I) & Symbols) > 0) DrawSymbolON(I); else DrawSymbolOFF(I); }
 		/// <summary>Draw Symbol</summary><param name="Symbols"></param>
 		public void DrawSymbol (Byte Symbols) { ShownSymbol = Symbols; DrawAll(); }

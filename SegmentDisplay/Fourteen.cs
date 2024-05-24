@@ -10,11 +10,9 @@ namespace RTYC.SegmentDisplay
 	/// <summary>Define Control</summary>
 	public class Fourteen : SegmentDisplay
 	{
-		/// <summary>Initialize Component</summary>
-		public Fourteen () => base.InitializeComponent();
 		private protected override Single Aspect => 0.75F;
 		private protected override Size InitSize => new Size(150, 200);
-		private protected override string InitName => "FourteenSegmentDisplay";
+		private protected override String InitName => "FourteenSegmentDisplay";
 		private protected override Dictionary<UInt16, Region> SegmentRegion => new Dictionary<UInt16, Region>
 		{
 			{ 0X0, RP(new Single[] { 11, 10, 21, 20, 129, 20, 139, 10, 129, 0, 21, 0 }) },
@@ -54,7 +52,7 @@ namespace RTYC.SegmentDisplay
 			{ WordStyle.u, 62 }, { WordStyle.v, 3120 }, { WordStyle.w, 10294 }, { WordStyle.x, 11520 }, { WordStyle.y, 5376 }, { WordStyle.z, 3081 },
 			{ WordStyle.LeftCurlyBracket, 0 }, { WordStyle.Vertical, 4608 }, { WordStyle.RightCurlyBracket, 0 }, { WordStyle.Tilde, 0 }
 		};
-		private protected override Dictionary<Byte, Region> SymbolRegions => SREmpty;
+		private protected override Dictionary<Byte, Region> SymbolRegion => SREmpty;
 		private protected override Dictionary<DotStyle, Byte> DotMapping => DMEmpty;
 	}
 }
