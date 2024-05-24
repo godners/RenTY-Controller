@@ -18,10 +18,8 @@ namespace RTYC.Designer
 	public partial class WinMain : Form
 	{
 		public WinMain () => InitializeComponent();
-
 		private void WinMain_Load (object sender, EventArgs e)
 		{
-			//Debug.Print(seven1.BackColor.ToArgb().ToString());
 			seven1.SetColor(TemplateName.Red);
 			eight1.SetColor(TemplateName.Green);
 			nine1.SetColor(TemplateName.Orange);
@@ -29,39 +27,28 @@ namespace RTYC.Designer
 		}
 		private readonly Char[] DigitChar = new Char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' ' };
 		Int32 SD7 = 65;
-		//private void NextSeven () { }//{ seven1.DrawChar(DigitChar[SD7 % DigitChar.Length]); label1.Text = DigitChar[SD7++ % DigitChar.Length].ToString(); }
 		private void Button1_Click (object sender, EventArgs e)
 		{
-			seven1.DrawWord((WordStyle)SD7++);
+			label1.Text = ((WordStyle)SD7).ToString(); seven1.DrawWord((WordStyle)SD7++);
 		}
-		private void NextEight () { eight1.DrawChar(DigitChar[SD8 % DigitChar.Length]); label2.Text = DigitChar[SD8++ % DigitChar.Length].ToString(); }
-		private void RollEight () => eight1.DotON = !eight1.DotON;
-		Int32 SD8 = 0;
-		private void Button2_Click (object sender, EventArgs e) { NextEight(); RollEight(); }
-		Int32 SD9=0;
-		private void NextNine () { nine1.DrawChar(DigitChar[SD9 % DigitChar.Length]); label3.Text = DigitChar[SD9++ % DigitChar.Length].ToString(); }
-		private void Button3_Click (object sender, EventArgs e) => NextNine();
+		Int32 SD8 = 48; Int32 SDD = 0;
+		private void Button2_Click (object sender, EventArgs e) 
+		{
+			label2.Text = ((WordStyle)SD8).ToString(); eight1.DrawWord((WordStyle)SD8++); 
+			eight1.DrawDot((DotStyle)(SDD == 1 ? SDD-- : SDD++));
+		}
+		Int32 SD9=48;		
+		private void Button3_Click (object sender, EventArgs e) 
+		{
+			label3.Text = ((WordStyle)SD9).ToString(); nine1.DrawWord((WordStyle)SD9++);
+		}
 
-		Int32 SD14 = 97;
-		
+		Int32 SD14 = 97;		
 		private void Button5_Click (object sender, EventArgs e)
 		{
-			fourteen1.DrawWord((WordStyle)SD14++);
+			label4.Text = ((WordStyle)SD14).ToString(); fourteen1.DrawWord((WordStyle)SD14++);
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-		private void NextAll() { /*NextSeven();*/ NextEight(); RollEight(); NextNine(); }
+		private void NextAll() { /*NextSeven();*/ /*NextEight();*/ /*RollEight();*/ /*NextNine();*/ }
 		private void Timer1_Tick (object sender, EventArgs e) => NextAll(); 
 		private void Button4_Click (object sender, EventArgs e) => timer1.Enabled = !timer1.Enabled;
 

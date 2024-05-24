@@ -7,28 +7,28 @@ using static RTYC.SegmentDisplay.SegmentDisplayStyle;
 
 namespace RTYC.SegmentDisplay
 {
-	/// <summary>Segment Display - Fourteen</summary>
-	public class Fourteen : SegmentDisplay
+	/// <summary>Segment Display - Sixteen</summary>
+	public partial class Sixteen : SegmentDisplay
 	{
-		private protected override Single Aspect => 0.75F;
-		private protected override Size InitSize => new Size(150, 200);
-		private protected override String InitName => "FourteenSegmentDisplay";
+		private protected override Single Aspect => 0.9F;
+		private protected override Size InitSize => new Size(180, 200);  // From (150, 200)
+		private protected override String InitName => "SixteenSegmentDisplay";
 		private protected override Dictionary<UInt16, Region> SegmentRegion => new Dictionary<UInt16, Region>
 		{
-			{ 0X0, RP(new Single[] { 11, 10, 21, 20, 129, 20, 139, 10, 129, 0, 21, 0 }) },
-			{ 0X1, RP(new Single[] { 140, 11, 130, 21, 130, 89, 140, 99, 150, 89, 150, 21 }) },
-			{ 0X2, RP(new Single[] { 140, 101, 130, 111, 130, 179, 140, 189, 150, 179, 150, 111 }) },
-			{ 0X3, RP(new Single[] { 11, 190, 21, 200, 129, 200, 139, 190, 129, 180, 21, 180 }) },
-			{ 0X4, RP(new Single[] { 10, 101, 0, 111, 0, 179, 10, 189, 20, 179, 20, 111 }) },
-			{ 0X5, RP(new Single[] { 10, 11, 0, 21, 0, 89, 10, 99, 20, 89, 20, 21 }) },
-			{ 0X6, RP(new Single[] { 11, 100, 21, 110, 84, 110, 74, 100, 64, 90, 21, 90 }) },
-			{ 0X7, RP(new Single[] { 76, 100, 86, 110, 129, 110, 139, 100, 129, 90, 86, 90 }) },
-			{ 0X8, RP(new Single[] { 21, 21, 21, 31.76F, 57.196F, 89, 64, 89, 64, 78.24F, 27.804F, 21 }) },
-			{ 0X9, RP(new Single[] { 65, 21, 65, 89, 75, 99, 85, 89, 85, 21 }) },
-			{ 0XA, RP(new Single[] { 129, 21, 122.196F, 21, 86, 75.24F, 86, 89, 92.804F, 89, 129, 31.76F }) },
-			{ 0XB, RP(new Single[] { 64, 111, 57.196F, 111, 21, 168.24F, 21, 179, 27.804F, 179, 64, 121.76F }) },
-			{ 0XC, RP(new Single[] { 75, 101, 65, 111, 65, 179, 85, 179, 85, 111 }) },
-			{ 0XD, RP(new Single[] { 86, 111, 86, 121.76F, 122.196F, 179, 129, 179, 129, 168.24F, 92.804F, 111 }) },
+			//{ 0X0, RP(new Single[] { 11, 10, 21, 20, 129, 20, 139, 10, 129, 0, 21, 0 }) },
+			//{ 0X1, RP(new Single[] { 140, 11, 130, 21, 130, 89, 140, 99, 150, 89, 150, 21 }) },
+			//{ 0X2, RP(new Single[] { 140, 101, 130, 111, 130, 179, 140, 189, 150, 179, 150, 111 }) },
+			//{ 0X3, RP(new Single[] { 11, 190, 21, 200, 129, 200, 139, 190, 129, 180, 21, 180 }) },
+			//{ 0X4, RP(new Single[] { 10, 101, 0, 111, 0, 179, 10, 189, 20, 179, 20, 111 }) },
+			//{ 0X5, RP(new Single[] { 10, 11, 0, 21, 0, 89, 10, 99, 20, 89, 20, 21 }) },
+			//{ 0X6, RP(new Single[] { 11, 100, 21, 110, 84, 110, 74, 100, 64, 90, 21, 90 }) },
+			//{ 0X7, RP(new Single[] { 76, 100, 86, 110, 129, 110, 139, 100, 129, 90, 86, 90 }) },
+			//{ 0X8, RP(new Single[] { 21, 21, 21, 31.76F, 57.196F, 89, 64, 89, 64, 78.24F, 27.804F, 21 }) },
+			//{ 0X9, RP(new Single[] { 65, 21, 65, 89, 75, 99, 85, 89, 85, 21 }) },
+			//{ 0XA, RP(new Single[] { 129, 21, 122.196F, 21, 86, 75.24F, 86, 89, 92.804F, 89, 129, 31.76F }) },
+			//{ 0XB, RP(new Single[] { 64, 111, 57.196F, 111, 21, 168.24F, 21, 179, 27.804F, 179, 64, 121.76F }) },
+			//{ 0XC, RP(new Single[] { 75, 101, 65, 111, 65, 179, 85, 179, 85, 111 }) },
+			//{ 0XD, RP(new Single[] { 86, 111, 86, 121.76F, 122.196F, 179, 129, 179, 129, 168.24F, 92.804F, 111 }) },
 			{ 0XE, REmpty }, { 0XF, REmpty }
 		};
 		private protected override Dictionary<WordStyle, UInt16> WordMapping => new Dictionary<WordStyle, UInt16>
@@ -52,7 +52,15 @@ namespace RTYC.SegmentDisplay
 			{ WordStyle.u, 62 }, { WordStyle.v, 3120 }, { WordStyle.w, 10294 }, { WordStyle.x, 11520 }, { WordStyle.y, 5376 }, { WordStyle.z, 3081 },
 			{ WordStyle.LeftCurlyBracket, 0 }, { WordStyle.Vertical, 4608 }, { WordStyle.RightCurlyBracket, 0 }, { WordStyle.Tilde, 0 }
 		};
-		private protected override Dictionary<Byte, Region> SymbolRegion => SREmpty;
-		private protected override Dictionary<DotStyle, Byte> DotMapping => DMEmpty;
+		private protected override Dictionary<Byte, Region> SymbolRegion
+		{
+			get
+			{
+				//////////////////
+				return null;
+			}
+		}
+		private protected override Dictionary<DotStyle, Byte> DotMapping => new Dictionary<DotStyle, Byte>
+		{ { DotStyle.None, 0 }, { DotStyle.Dot, 1 }, { DotStyle.Comma, 3 } };
 	}
 }

@@ -14,7 +14,9 @@ namespace RTYC.SegmentDisplay
 	{
 		#region Region - Calculate Tools for Segment Display
 		private protected Single Scope => Height / 200F;
+		private protected SizeF S (Single W, Single H) => new SizeF(W * Scope, H * Scope);
 		private protected PointF P (Single X, Single Y) => new PointF(X * Scope, Y * Scope);
+		private protected RectangleF R (Single X, Single Y, Single W, Single H) => new RectangleF(P(X, Y), S(W, H));
 		private protected PointF[] PS (Single[] Ss)
 		{ List<PointF> Pl = new List<PointF>(); for (Int32 I = 0; I < Ss.Length;) Pl.Add(P(Ss[I++], Ss[I++])); return Pl.ToArray(); }
 		private protected Region RP (Single[] Ss) { GraphicsPath GP = new GraphicsPath(); GP.AddPolygon(PS(Ss)); return new Region(GP); }

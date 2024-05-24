@@ -45,35 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Eight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Fourteen.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Nine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="SegmentDisplay.Style.cs" />
-    <Compile Include="Nine\Nine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Nine\Nine.Designer.cs">
-      <DependentUpon>Nine.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Nine\Nine.Parameter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Nine\Nine.Segment.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="ColorTemplate.cs" />
-    <Compile Include="Eight\Eight.Parameter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Eight\Eight.Segment.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Eight\Eight.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Eight\Eight.Designer.cs">
-      <DependentUpon>Eight.cs</DependentUpon>
-    </Compile>
     <Compile Include="SegmentDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -90,18 +72,15 @@
     <Compile Include="Seven.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Sixteen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="RenTY Controller.ico" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Eight\Eight.resx">
-      <DependentUpon>Eight.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Nine\Nine.resx">
-      <DependentUpon>Nine.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SegmentDisplay.resx">
       <DependentUpon>SegmentDisplay.cs</DependentUpon>
     </EmbeddedResource>

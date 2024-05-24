@@ -3,25 +3,26 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using static RTYC.SegmentDisplay.SegmentDisplayStyle;
 
 namespace RTYC.SegmentDisplay
 {
-	/// <summary>Segment Display - Seven</summary>
-	public class Seven : SegmentDisplay
+	/// <summary>Segment Display - Eight</summary>
+	public class Eight : SegmentDisplay
 	{
-		private protected override Single Aspect => 0.6F;
-		private protected override Size InitSize => new Size(120, 200);
-		private protected override String InitName => "SevenSegmentDisplay";
+		private protected override Single Aspect => 0.75F;
+		private protected override Size InitSize => new Size(150, 200);
+		private protected override String InitName => "EightSegmentDisplay";
 		private protected override Dictionary<UInt16, Region> SegmentRegion => new Dictionary<UInt16, Region>
 		{
-			{ 0X0, RP(new Single[] { 17.5F, 12.5F, 30, 25, 90, 25, 102.5F, 12.5F, 90, 0, 30, 0 }) },
-			{ 0X1, RP(new Single[] { 107.5F, 17.5F, 95, 30, 95, 85.5F, 107.5F, 95, 120, 82.5F, 120, 30 }) },
-			{ 0X2, RP(new Single[] { 107.5F, 105, 95, 117.5F, 95, 170, 107.5F, 182.5F, 120, 170, 120, 117.5F }) },
-			{ 0X3, RP(new Single[] { 17.5F, 187.5F, 30, 200, 90, 200, 102.5F, 187.5F, 90, 175, 30, 175 }) },
-			{ 0X4, RP(new Single[] { 12.5F, 107.5F, 0, 117.5F, 0, 170, 12.5F, 182.5F, 25, 170, 25, 117.5F }) },
-			{ 0X5, RP(new Single[] { 12.5F, 17.5F, 0, 30, 0, 82.5F, 12.5F, 95, 25, 82.5F, 25, 30 }) },
-			{ 0X6, RP(new Single[] { 17.5F, 100, 30, 112.5F, 90, 112.5F, 102.5F, 100, 90, 87.5F, 30, 87.5F }) },
+			{ 0X0, RP(new Single[] { 45.625F, 12.5F, 56.25F, 25, 116.25F, 25, 130.625F, 12.5F, 120, 0, 60, 0 }) },
+			{ 0X1, RP(new Single[] { 134.875F, 17.5F, 120.5F, 30, 112.175F, 85.5F, 123.25F, 95, 137.625F, 82.5F, 145.5F, 30 }) },
+			{ 0X2, RP(new Single[] { 121.75F, 105, 107.375F, 117.5F, 99.5F, 170, 110.125F, 182.5F, 124.5F, 170, 132.375F, 117.5F }) },
+			{ 0X3, RP(new Single[] { 19.375F, 187.5F, 30, 200, 90, 200, 104.375F, 187.5F, 93.75F, 175, 33.75F, 175 }) },
+			{ 0X4, RP(new Single[] { 26.375F, 107.5F, 12.375F, 117.5F, 4.5F, 170, 15.125F, 182.5F, 29.5F, 170, 37.375F, 117.5F }) },
+			{ 0X5, RP(new Single[] { 39.875F, 17.5F, 25.5F, 30, 17.625F, 82.5F, 28.25F, 95, 42.625F, 82.5F, 50.5F, 30 }) },
+			{ 0X6, RP(new Single[] { 32.5F, 100, 43.125F, 112.5F, 103.125F, 112.5F, 117.5F, 100, 106.875F, 87.5F, 46.875F, 87.5F }) },
 			{ 0X7, REmpty }, { 0X8, REmpty }, { 0X9, REmpty }, { 0XA, REmpty }, { 0XB, REmpty },
 			{ 0XC, REmpty }, { 0XD, REmpty }, { 0XE, REmpty }, { 0XF, REmpty }
 		};
@@ -46,7 +47,15 @@ namespace RTYC.SegmentDisplay
 			{ WordStyle.u, 0 }, { WordStyle.v, 0 }, { WordStyle.w, 0 }, { WordStyle.x, 0 }, { WordStyle.y, 0 }, { WordStyle.z, 0 },
 			{ WordStyle.LeftCurlyBracket, 0 }, { WordStyle.Vertical, 0 }, { WordStyle.RightCurlyBracket, 0 }, { WordStyle.Tilde, 0 }
 		};
-		private protected override Dictionary<Byte, Region> SymbolRegion => SREmpty;
-		private protected override Dictionary<DotStyle, Byte> DotMapping => DMEmpty;
+		private protected override Dictionary<Byte, Region> SymbolRegion
+		{
+			get
+			{
+				GraphicsPath GP = new GraphicsPath(); GP.AddEllipse(R(125, 175, 25, 25));
+				Dictionary<Byte, Region> SR = SREmpty; SR[0] = new Region(GP); return SR;
+			}
+		}
+		private protected override Dictionary<DotStyle, Byte> DotMapping => new Dictionary<DotStyle, Byte>
+		{ { DotStyle.None, 0 }, { DotStyle.Dot, 1 }, { DotStyle.Comma, 0 } };
 	}
 }
