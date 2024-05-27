@@ -27,7 +27,7 @@ namespace RTYC.SegmentDisplay
 		}
 		private EventHandler EHPT => new EventHandler(Property);
 		private EventHandler EHDA => new EventHandler(DrawAll);
-		private Font InitFont = new Font ("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, (Byte)(0));
+		private Font InitFont = new Font ("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
 		private Padding InitPadding = new Padding(0);
 	}
 }

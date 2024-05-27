@@ -54,7 +54,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SegmentDisplay.Style.cs" />
-    <Compile Include="ColorTemplate.cs" />
+    <Compile Include="SegmentDisplay.Color.cs.cs" />
     <Compile Include="SegmentDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>

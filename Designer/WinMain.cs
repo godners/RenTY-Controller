@@ -24,6 +24,7 @@ namespace RTYC.Designer
 			eight1.SetColor(TemplateName.Green);
 			nine1.SetColor(TemplateName.Orange);
 			fourteen1.SetColor(TemplateName.Black);
+			sixteen1.SetColor(TemplateName.White);
 		}
 		private readonly Char[] DigitChar = new Char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' ' };
 		Int32 SD7 = 65;
@@ -46,7 +47,13 @@ namespace RTYC.Designer
 		Int32 SD14 = 97;		
 		private void Button5_Click (object sender, EventArgs e)
 		{
-			label4.Text = ((WordStyle)SD14).ToString(); fourteen1.DrawWord((WordStyle)SD14++);
+			label4.Text = ((WordStyle)SD14).ToString(); fourteen1.DrawWord((WordStyle)SD14++);			
+		}
+		Int32 SD16 = 97;
+		private void button6_Click (object sender, EventArgs e)
+		{
+			label5.Text = ((WordStyle)SD16).ToString(); sixteen1.DrawWord((WordStyle)SD16++);
+			sixteen1.DrawDot(DotStyle.Comma);
 		}
 		private void NextAll() { /*NextSeven();*/ /*NextEight();*/ /*RollEight();*/ /*NextNine();*/ }
 		private void Timer1_Tick (object sender, EventArgs e) => NextAll(); 

@@ -28,10 +28,13 @@ namespace RTYC.Designer
 			this.label3 = new System.Windows.Forms.Label();
 			this.button5 = new System.Windows.Forms.Button();
 			this.label4 = new System.Windows.Forms.Label();
+			this.button6 = new System.Windows.Forms.Button();
+			this.label5 = new System.Windows.Forms.Label();
+			this.nine1 = new RTYC.SegmentDisplay.Nine();
 			this.eight1 = new RTYC.SegmentDisplay.Eight();
 			this.seven1 = new RTYC.SegmentDisplay.Seven();
 			this.fourteen1 = new RTYC.SegmentDisplay.Fourteen();
-			this.nine1 = new RTYC.SegmentDisplay.Nine();
+			this.sixteen1 = new RTYC.SegmentDisplay.Sixteen();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -125,6 +128,45 @@ namespace RTYC.Designer
 			this.label4.TabIndex = 12;
 			this.label4.Text = "label4";
 			// 
+			// button6
+			// 
+			this.button6.Location = new System.Drawing.Point(565, 264);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(75, 23);
+			this.button6.TabIndex = 16;
+			this.button6.Text = "button6";
+			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(568, 249);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(41, 12);
+			this.label5.TabIndex = 17;
+			this.label5.Text = "label5";
+			// 
+			// nine1
+			// 
+			this.nine1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.nine1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.nine1.BackColor = System.Drawing.SystemColors.Control;
+			this.nine1.CausesValidation = false;
+			this.nine1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.nine1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nine1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.nine1.GroundColor = System.Drawing.SystemColors.Control;
+			this.nine1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.nine1.Location = new System.Drawing.Point(295, 49);
+			this.nine1.Margin = new System.Windows.Forms.Padding(0);
+			this.nine1.Name = "nine1";
+			this.nine1.OffColor = System.Drawing.SystemColors.Control;
+			this.nine1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.nine1.Size = new System.Drawing.Size(120, 200);
+			this.nine1.TabIndex = 15;
+			this.nine1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
+			// 
 			// eight1
 			// 
 			this.eight1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -185,29 +227,33 @@ namespace RTYC.Designer
 			this.fourteen1.TabIndex = 10;
 			this.fourteen1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
-			// nine1
+			// sixteen1
 			// 
-			this.nine1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.nine1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.nine1.CausesValidation = false;
-			this.nine1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
-			this.nine1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.nine1.GroundColor = System.Drawing.SystemColors.Control;
-			this.nine1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.nine1.Location = new System.Drawing.Point(295, 49);
-			this.nine1.Margin = new System.Windows.Forms.Padding(0);
-			this.nine1.Name = "nine1";
-			this.nine1.OffColor = System.Drawing.SystemColors.Control;
-			this.nine1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.nine1.Size = new System.Drawing.Size(120, 200);
-			this.nine1.TabIndex = 15;
-			this.nine1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
+			this.sixteen1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.sixteen1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.sixteen1.BackColor = System.Drawing.SystemColors.Control;
+			this.sixteen1.CausesValidation = false;
+			this.sixteen1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.sixteen1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.sixteen1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.sixteen1.GroundColor = System.Drawing.SystemColors.Control;
+			this.sixteen1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.sixteen1.Location = new System.Drawing.Point(565, 49);
+			this.sixteen1.Margin = new System.Windows.Forms.Padding(0);
+			this.sixteen1.Name = "sixteen1";
+			this.sixteen1.OffColor = System.Drawing.SystemColors.Control;
+			this.sixteen1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.sixteen1.Size = new System.Drawing.Size(180, 200);
+			this.sixteen1.TabIndex = 11;
+			this.sixteen1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
 			// WinMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.label5);
+			this.Controls.Add(this.button6);
 			this.Controls.Add(this.nine1);
 			this.Controls.Add(this.eight1);
 			this.Controls.Add(this.seven1);
@@ -221,6 +267,7 @@ namespace RTYC.Designer
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
+			this.Controls.Add(this.sixteen1);
 			this.Name = "WinMain";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.WinMain_Load);
@@ -245,6 +292,9 @@ namespace RTYC.Designer
 		private SegmentDisplay.Seven seven1;
 		private SegmentDisplay.Eight eight1;
 		private SegmentDisplay.Nine nine1;
+		private SegmentDisplay.Sixteen sixteen1;
+		private Button button6;
+		private Label label5;
 	}
 }
 

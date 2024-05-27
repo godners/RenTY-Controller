@@ -47,14 +47,9 @@ namespace RTYC.SegmentDisplay
 			{ WordStyle.u, 0 }, { WordStyle.v, 0 }, { WordStyle.w, 0 }, { WordStyle.x, 0 }, { WordStyle.y, 0 }, { WordStyle.z, 0 },
 			{ WordStyle.LeftCurlyBracket, 0 }, { WordStyle.Vertical, 0 }, { WordStyle.RightCurlyBracket, 0 }, { WordStyle.Tilde, 0 }
 		};
+		private GraphicsPath GP0 { get { GraphicsPath GP = new GraphicsPath(); GP.AddEllipse(R(125, 175, 25, 25)); return GP; } }
 		private protected override Dictionary<Byte, Region> SymbolRegion
-		{
-			get
-			{
-				GraphicsPath GP = new GraphicsPath(); GP.AddEllipse(R(125, 175, 25, 25));
-				Dictionary<Byte, Region> SR = SREmpty; SR[0] = new Region(GP); return SR;
-			}
-		}
+		{ get { Dictionary<Byte, Region> SR = SREmpty; SR[0] = new Region(GP0); return SR; } }
 		private protected override Dictionary<DotStyle, Byte> DotMapping => new Dictionary<DotStyle, Byte>
 		{ { DotStyle.None, 0 }, { DotStyle.Dot, 1 }, { DotStyle.Comma, 0 } };
 	}
