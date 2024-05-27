@@ -55,8 +55,8 @@ namespace RTYC.SegmentDisplay
 		#endregion
 		#region Region Event Drawing Function
 		private RectangleF GroundRectangle => new RectangleF(0, 0, Width, Height);
-		private void DrawGround () => G.FillRectangle(new SolidBrush(GroundColor), GroundRectangle);
-		private void DrawAll () { DrawGround(); DrawSegmentRegion(ShownSegment); DrawSymbolRegion(ShownSymbol); }
+		private protected void DrawGround () => G.FillRectangle(new SolidBrush(GroundColor), GroundRectangle);
+		private protected virtual void DrawAll () { DrawGround(); DrawSegmentRegion(ShownSegment); DrawSymbolRegion(ShownSymbol); }
 		private void DrawAll (Object O, EventArgs E) => DrawAll();
 		private void DrawAll (Object O, LayoutEventArgs E) => DrawAll();
 		private void DrawAll (Object O, PaintEventArgs E) => DrawAll();

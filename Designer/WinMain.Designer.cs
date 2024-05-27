@@ -30,11 +30,15 @@ namespace RTYC.Designer
 			this.label4 = new System.Windows.Forms.Label();
 			this.button6 = new System.Windows.Forms.Button();
 			this.label5 = new System.Windows.Forms.Label();
+			this.button7 = new System.Windows.Forms.Button();
+			this.colon1 = new RTYC.SegmentDisplay.Colon();
 			this.nine1 = new RTYC.SegmentDisplay.Nine();
 			this.eight1 = new RTYC.SegmentDisplay.Eight();
 			this.seven1 = new RTYC.SegmentDisplay.Seven();
 			this.fourteen1 = new RTYC.SegmentDisplay.Fourteen();
 			this.sixteen1 = new RTYC.SegmentDisplay.Sixteen();
+			this.fourTimeSegment1 = new RTYC.Clock.FourTimeSegment();
+			this.label6 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -69,7 +73,7 @@ namespace RTYC.Designer
 			// 
 			// button4
 			// 
-			this.button4.Location = new System.Drawing.Point(44, 385);
+			this.button4.Location = new System.Drawing.Point(713, 264);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(75, 23);
 			this.button4.TabIndex = 6;
@@ -79,7 +83,7 @@ namespace RTYC.Designer
 			// 
 			// timer1
 			// 
-			this.timer1.Interval = 300;
+			this.timer1.Interval = 1000;
 			this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
 			// 
 			// label1
@@ -136,7 +140,7 @@ namespace RTYC.Designer
 			this.button6.TabIndex = 16;
 			this.button6.Text = "button6";
 			this.button6.UseVisualStyleBackColor = true;
-			this.button6.Click += new System.EventHandler(this.button6_Click);
+			this.button6.Click += new System.EventHandler(this.Button6_Click);
 			// 
 			// label5
 			// 
@@ -146,6 +150,37 @@ namespace RTYC.Designer
 			this.label5.Size = new System.Drawing.Size(41, 12);
 			this.label5.TabIndex = 17;
 			this.label5.Text = "label5";
+			// 
+			// button7
+			// 
+			this.button7.Location = new System.Drawing.Point(25, 599);
+			this.button7.Name = "button7";
+			this.button7.Size = new System.Drawing.Size(75, 23);
+			this.button7.TabIndex = 20;
+			this.button7.Text = "button7";
+			this.button7.UseVisualStyleBackColor = true;
+			this.button7.Click += new System.EventHandler(this.Button7_Click);
+			// 
+			// colon1
+			// 
+			this.colon1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.colon1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.colon1.BackColor = System.Drawing.SystemColors.Control;
+			this.colon1.CausesValidation = false;
+			this.colon1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.colon1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.colon1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.colon1.GroundColor = System.Drawing.SystemColors.Control;
+			this.colon1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.colon1.Location = new System.Drawing.Point(745, 49);
+			this.colon1.Margin = new System.Windows.Forms.Padding(0);
+			this.colon1.Name = "colon1";
+			this.colon1.OffColor = System.Drawing.SystemColors.Control;
+			this.colon1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.colon1.Size = new System.Drawing.Size(25, 200);
+			this.colon1.State = false;
+			this.colon1.TabIndex = 18;
+			this.colon1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
 			// nine1
 			// 
@@ -247,11 +282,41 @@ namespace RTYC.Designer
 			this.sixteen1.TabIndex = 11;
 			this.sixteen1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
+			// fourTimeSegment1
+			// 
+			this.fourTimeSegment1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.fourTimeSegment1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.fourTimeSegment1.BackColor = System.Drawing.SystemColors.Control;
+			this.fourTimeSegment1.CausesValidation = false;
+			this.fourTimeSegment1.ColonState = false;
+			this.fourTimeSegment1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.fourTimeSegment1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.fourTimeSegment1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.fourTimeSegment1.Location = new System.Drawing.Point(25, 346);
+			this.fourTimeSegment1.Margin = new System.Windows.Forms.Padding(0);
+			this.fourTimeSegment1.Name = "fourTimeSegment1";
+			this.fourTimeSegment1.Size = new System.Drawing.Size(655, 250);
+			this.fourTimeSegment1.TabIndex = 21;
+			this.fourTimeSegment1.Time = new System.DateTime(((long)(0)));
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(106, 604);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(41, 12);
+			this.label6.TabIndex = 22;
+			this.label6.Text = "label6";
+			// 
 			// WinMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.ClientSize = new System.Drawing.Size(1113, 850);
+			this.Controls.Add(this.label6);
+			this.Controls.Add(this.fourTimeSegment1);
+			this.Controls.Add(this.button7);
+			this.Controls.Add(this.colon1);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.button6);
 			this.Controls.Add(this.nine1);
@@ -295,6 +360,10 @@ namespace RTYC.Designer
 		private SegmentDisplay.Sixteen sixteen1;
 		private Button button6;
 		private Label label5;
+		private SegmentDisplay.Colon colon1;
+		private Button button7;
+		private Clock.FourTimeSegment fourTimeSegment1;
+		private Label label6;
 	}
 }
 

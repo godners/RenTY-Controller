@@ -25,8 +25,10 @@ namespace RTYC.Designer
 			nine1.SetColor(TemplateName.Orange);
 			fourteen1.SetColor(TemplateName.Black);
 			sixteen1.SetColor(TemplateName.White);
+			colon1.SetColor(TemplateName.Red);
+			fourTimeSegment1.SetSegmentColor(TemplateName.Green); //fourTimeSegment1.BackColor = Color.Red;
 		}
-		private readonly Char[] DigitChar = new Char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' ' };
+		//private readonly Char[] DigitChar = new Char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ' ' };
 		Int32 SD7 = 65;
 		private void Button1_Click (object sender, EventArgs e)
 		{
@@ -50,15 +52,20 @@ namespace RTYC.Designer
 			label4.Text = ((WordStyle)SD14).ToString(); fourteen1.DrawWord((WordStyle)SD14++);			
 		}
 		Int32 SD16 = 97;
-		private void button6_Click (object sender, EventArgs e)
+		private void Button6_Click (object sender, EventArgs e)
 		{
 			label5.Text = ((WordStyle)SD16).ToString(); sixteen1.DrawWord((WordStyle)SD16++);
 			sixteen1.DrawDot(DotStyle.Comma);
 		}
-		private void NextAll() { /*NextSeven();*/ /*NextEight();*/ /*RollEight();*/ /*NextNine();*/ }
-		private void Timer1_Tick (object sender, EventArgs e) => NextAll(); 
-		private void Button4_Click (object sender, EventArgs e) => timer1.Enabled = !timer1.Enabled;
+		private void Timer1_Tick (object sender, EventArgs e)
+		{
+			fourTimeSegment1.Time = DateTime.Now; fourTimeSegment1.ColonState = !fourTimeSegment1.ColonState; label6.Text = DateTime.Now.ToString();
+		}
+		private void Button4_Click (object sender, EventArgs e) { colon1.State = !colon1.State; }
 
-
+		private void Button7_Click (object sender, EventArgs e)
+		{
+			timer1.Enabled = !timer1.Enabled;
+		}
 	}
 }

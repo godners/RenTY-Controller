@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0AFF0282-2C80-436E-BB91-DD587160C85B}</ProjectGuid>
+    <ProjectGuid>{BDFA650B-EDC3-49BE-A812-996F57FB42A3}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>RTYC.SegmentDisplay</RootNamespace>
-    <AssemblyName>SegmentDisplay</AssemblyName>
+    <RootNamespace>RTYC.Clock</RootNamespace>
+    <AssemblyName>Clock</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\SegmentDisplay.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Clock.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,65 +29,41 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\SegmentDisplay.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>RenTY Controller.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <ApplicationIcon>RenTY.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Colon.cs">
+    <Compile Include="FourTimeSegment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Eight.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Fourteen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Nine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SegmentDisplay.Style.cs" />
-    <Compile Include="SegmentDisplay.Color.cs" />
-    <Compile Include="SegmentDisplay.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SegmentDisplay.Designer.cs">
-      <DependentUpon>SegmentDisplay.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SegmentDisplay.Parameter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SegmentDisplay.Segment.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="FourTimeSegment.Designer.cs">
+      <DependentUpon>FourTimeSegment.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Seven.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Sixteen.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RenTY Controller.ico" />
+    <Content Include="RenTY.ico" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SegmentDisplay.resx">
-      <DependentUpon>SegmentDisplay.cs</DependentUpon>
+    <EmbeddedResource Include="FourTimeSegment.resx">
+      <DependentUpon>FourTimeSegment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SegmentDisplay\SegmentDisplay.csproj">
+      <Project>{0aff0282-2c80-436e-bb91-dd587160c85b}</Project>
+      <Name>SegmentDisplay</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

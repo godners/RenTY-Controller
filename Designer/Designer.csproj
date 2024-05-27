@@ -92,6 +92,10 @@
     <Content Include="RenTY Controller.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Clock\Clock.csproj">
+      <Project>{BDFA650B-EDC3-49BE-A812-996F57FB42A3}</Project>
+      <Name>Clock</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SegmentDisplay\SegmentDisplay.csproj">
       <Project>{0aff0282-2c80-436e-bb91-dd587160c85b}</Project>
       <Name>SegmentDisplay</Name>

@@ -15,7 +15,7 @@ namespace RTYC.SegmentDisplay
 		protected override void Dispose (Boolean D) { if (D && (C != null)) C.Dispose(); base.Dispose(D); }
 		private protected abstract Size InitSize { get; }
 		private protected abstract String InitName { get; }
-		private protected virtual void InitializeComponent ()
+		private protected void InitializeComponent ()
 		{
 			SuspendLayout(); AutoScaleMode = AutoScaleMode.None; AutoSizeMode = AutoSizeMode.GrowAndShrink; AutoValidate = AutoValidate.Disable;
 			CausesValidation = false; Font = InitFont; ImeMode = ImeMode.Disable; Margin = InitPadding; Name = InitName; Size = InitSize;

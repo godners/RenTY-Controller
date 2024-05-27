@@ -11,7 +11,7 @@ namespace RTYC.SegmentDisplay
 	{
 		/// <summary>Initialize Component</summary>
 		public SegmentDisplay () => InitializeComponent();
-		private Graphics G => CreateGraphics();
+		private protected Graphics G => CreateGraphics();
 		private UInt16 ShownSegment = 0;
 		/// <summary>Shown Word</summary>
 		public WordStyle Word { get => SearchWord(ShownSegment); set => DrawWord(value); }
