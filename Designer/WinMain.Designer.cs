@@ -31,53 +31,69 @@ namespace RTYC.Designer
 			this.button6 = new System.Windows.Forms.Button();
 			this.label5 = new System.Windows.Forms.Label();
 			this.button7 = new System.Windows.Forms.Button();
+			this.label6 = new System.Windows.Forms.Label();
+			this.button8 = new System.Windows.Forms.Button();
+			this.label7 = new System.Windows.Forms.Label();
+			this.timer2 = new System.Windows.Forms.Timer(this.components);
+			this.button9 = new System.Windows.Forms.Button();
+			this.label8 = new System.Windows.Forms.Label();
+			this.timer3 = new System.Windows.Forms.Timer(this.components);
 			this.colon1 = new RTYC.SegmentDisplay.Colon();
 			this.nine1 = new RTYC.SegmentDisplay.Nine();
 			this.eight1 = new RTYC.SegmentDisplay.Eight();
 			this.seven1 = new RTYC.SegmentDisplay.Seven();
 			this.fourteen1 = new RTYC.SegmentDisplay.Fourteen();
 			this.sixteen1 = new RTYC.SegmentDisplay.Sixteen();
-			this.fourTimeSegment1 = new RTYC.Clock.FourTimeSegment();
-			this.label6 = new System.Windows.Forms.Label();
+			this.hourMinuteSecond1 = new RTYC.Clock.HourMinuteSecond();
+			this.minuteSecond1 = new RTYC.Clock.MinuteSecond();
+			this.hourMinute1 = new RTYC.Clock.HourMinute();
 			this.SuspendLayout();
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(25, 264);
+			this.button1.AutoSize = true;
+			this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button1.Location = new System.Drawing.Point(25, 252);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.Size = new System.Drawing.Size(21, 22);
 			this.button1.TabIndex = 1;
-			this.button1.Text = "Next Seven";
+			this.button1.Text = "7";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.Button1_Click);
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(145, 264);
+			this.button2.AutoSize = true;
+			this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button2.Location = new System.Drawing.Point(145, 252);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
+			this.button2.Size = new System.Drawing.Size(21, 22);
 			this.button2.TabIndex = 3;
-			this.button2.Text = "Next Eight";
+			this.button2.Text = "8";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.Button2_Click);
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(295, 264);
+			this.button3.AutoSize = true;
+			this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button3.Location = new System.Drawing.Point(295, 252);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(75, 23);
+			this.button3.Size = new System.Drawing.Size(21, 22);
 			this.button3.TabIndex = 5;
-			this.button3.Text = "Next Nine";
+			this.button3.Text = "9";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.Button3_Click);
 			// 
 			// button4
 			// 
-			this.button4.Location = new System.Drawing.Point(713, 264);
+			this.button4.AutoSize = true;
+			this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button4.Location = new System.Drawing.Point(745, 252);
 			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(75, 23);
+			this.button4.Size = new System.Drawing.Size(21, 22);
 			this.button4.TabIndex = 6;
-			this.button4.Text = "Auto Digit";
+			this.button4.Text = ":";
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.Button4_Click);
 			// 
@@ -89,7 +105,7 @@ namespace RTYC.Designer
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(23, 249);
+			this.label1.Location = new System.Drawing.Point(52, 257);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(41, 12);
 			this.label1.TabIndex = 7;
@@ -98,7 +114,7 @@ namespace RTYC.Designer
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(143, 249);
+			this.label2.Location = new System.Drawing.Point(172, 257);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(41, 12);
 			this.label2.TabIndex = 8;
@@ -107,7 +123,7 @@ namespace RTYC.Designer
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(293, 249);
+			this.label3.Location = new System.Drawing.Point(322, 257);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(41, 12);
 			this.label3.TabIndex = 9;
@@ -115,18 +131,20 @@ namespace RTYC.Designer
 			// 
 			// button5
 			// 
-			this.button5.Location = new System.Drawing.Point(420, 264);
+			this.button5.AutoSize = true;
+			this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button5.Location = new System.Drawing.Point(415, 252);
 			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(75, 23);
+			this.button5.Size = new System.Drawing.Size(27, 22);
 			this.button5.TabIndex = 11;
-			this.button5.Text = "Next 14";
+			this.button5.Text = "14";
 			this.button5.UseVisualStyleBackColor = true;
 			this.button5.Click += new System.EventHandler(this.Button5_Click);
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(418, 249);
+			this.label4.Location = new System.Drawing.Point(448, 257);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(41, 12);
 			this.label4.TabIndex = 12;
@@ -134,18 +152,20 @@ namespace RTYC.Designer
 			// 
 			// button6
 			// 
-			this.button6.Location = new System.Drawing.Point(565, 264);
+			this.button6.AutoSize = true;
+			this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button6.Location = new System.Drawing.Point(565, 252);
 			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(75, 23);
+			this.button6.Size = new System.Drawing.Size(27, 22);
 			this.button6.TabIndex = 16;
-			this.button6.Text = "button6";
+			this.button6.Text = "16";
 			this.button6.UseVisualStyleBackColor = true;
 			this.button6.Click += new System.EventHandler(this.Button6_Click);
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(568, 249);
+			this.label5.Location = new System.Drawing.Point(598, 257);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(41, 12);
 			this.label5.TabIndex = 17;
@@ -153,13 +173,76 @@ namespace RTYC.Designer
 			// 
 			// button7
 			// 
-			this.button7.Location = new System.Drawing.Point(25, 599);
+			this.button7.AutoSize = true;
+			this.button7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button7.Location = new System.Drawing.Point(25, 380);
 			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(75, 23);
+			this.button7.Size = new System.Drawing.Size(27, 22);
 			this.button7.TabIndex = 20;
-			this.button7.Text = "button7";
+			this.button7.Text = "HM";
 			this.button7.UseVisualStyleBackColor = true;
 			this.button7.Click += new System.EventHandler(this.Button7_Click);
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Location = new System.Drawing.Point(58, 385);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(41, 12);
+			this.label6.TabIndex = 22;
+			this.label6.Text = "label6";
+			// 
+			// button8
+			// 
+			this.button8.AutoSize = true;
+			this.button8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button8.Location = new System.Drawing.Point(295, 380);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(27, 22);
+			this.button8.TabIndex = 25;
+			this.button8.Text = "MS";
+			this.button8.UseVisualStyleBackColor = true;
+			this.button8.Click += new System.EventHandler(this.Button8_Click);
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(328, 385);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(41, 12);
+			this.label7.TabIndex = 26;
+			this.label7.Text = "label7";
+			// 
+			// timer2
+			// 
+			this.timer2.Interval = 1000;
+			this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
+			// 
+			// button9
+			// 
+			this.button9.AutoSize = true;
+			this.button9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button9.Location = new System.Drawing.Point(549, 380);
+			this.button9.Name = "button9";
+			this.button9.Size = new System.Drawing.Size(33, 22);
+			this.button9.TabIndex = 28;
+			this.button9.Text = "HMS";
+			this.button9.UseVisualStyleBackColor = true;
+			this.button9.Click += new System.EventHandler(this.Button9_Click);
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Location = new System.Drawing.Point(588, 385);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(41, 12);
+			this.label8.TabIndex = 29;
+			this.label8.Text = "label8";
+			// 
+			// timer3
+			// 
+			this.timer3.Interval = 1000;
+			this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
 			// 
 			// colon1
 			// 
@@ -282,39 +365,64 @@ namespace RTYC.Designer
 			this.sixteen1.TabIndex = 11;
 			this.sixteen1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
-			// fourTimeSegment1
+			// hourMinuteSecond1
 			// 
-			this.fourTimeSegment1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.fourTimeSegment1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.fourTimeSegment1.BackColor = System.Drawing.SystemColors.Control;
-			this.fourTimeSegment1.CausesValidation = false;
-			this.fourTimeSegment1.ColonState = false;
-			this.fourTimeSegment1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.fourTimeSegment1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.fourTimeSegment1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.fourTimeSegment1.Location = new System.Drawing.Point(25, 346);
-			this.fourTimeSegment1.Margin = new System.Windows.Forms.Padding(0);
-			this.fourTimeSegment1.Name = "fourTimeSegment1";
-			this.fourTimeSegment1.Size = new System.Drawing.Size(655, 250);
-			this.fourTimeSegment1.TabIndex = 21;
-			this.fourTimeSegment1.Time = new System.DateTime(((long)(0)));
+			this.hourMinuteSecond1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.hourMinuteSecond1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.hourMinuteSecond1.CausesValidation = false;
+			this.hourMinuteSecond1.ColonState = true;
+			this.hourMinuteSecond1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.hourMinuteSecond1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.hourMinuteSecond1.Location = new System.Drawing.Point(549, 277);
+			this.hourMinuteSecond1.Margin = new System.Windows.Forms.Padding(0);
+			this.hourMinuteSecond1.Name = "hourMinuteSecond1";
+			this.hourMinuteSecond1.Size = new System.Drawing.Size(398, 100);
+			this.hourMinuteSecond1.TabIndex = 27;
+			this.hourMinuteSecond1.Time = new System.DateTime(((long)(0)));
 			// 
-			// label6
+			// minuteSecond1
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(106, 604);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(41, 12);
-			this.label6.TabIndex = 22;
-			this.label6.Text = "label6";
+			this.minuteSecond1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.minuteSecond1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.minuteSecond1.CausesValidation = false;
+			this.minuteSecond1.ColonState = true;
+			this.minuteSecond1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.minuteSecond1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.minuteSecond1.Location = new System.Drawing.Point(287, 277);
+			this.minuteSecond1.Margin = new System.Windows.Forms.Padding(0);
+			this.minuteSecond1.Name = "minuteSecond1";
+			this.minuteSecond1.Size = new System.Drawing.Size(262, 100);
+			this.minuteSecond1.TabIndex = 24;
+			this.minuteSecond1.Time = new System.DateTime(((long)(0)));
+			// 
+			// hourMinute1
+			// 
+			this.hourMinute1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.hourMinute1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.hourMinute1.CausesValidation = false;
+			this.hourMinute1.ColonState = true;
+			this.hourMinute1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.hourMinute1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.hourMinute1.Location = new System.Drawing.Point(25, 277);
+			this.hourMinute1.Margin = new System.Windows.Forms.Padding(0);
+			this.hourMinute1.Name = "hourMinute1";
+			this.hourMinute1.Size = new System.Drawing.Size(262, 100);
+			this.hourMinute1.TabIndex = 23;
+			this.hourMinute1.Time = new System.DateTime(((long)(0)));
 			// 
 			// WinMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1113, 850);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.button9);
+			this.Controls.Add(this.hourMinuteSecond1);
+			this.Controls.Add(this.label7);
+			this.Controls.Add(this.button8);
+			this.Controls.Add(this.minuteSecond1);
+			this.Controls.Add(this.hourMinute1);
 			this.Controls.Add(this.label6);
-			this.Controls.Add(this.fourTimeSegment1);
 			this.Controls.Add(this.button7);
 			this.Controls.Add(this.colon1);
 			this.Controls.Add(this.label5);
@@ -362,8 +470,16 @@ namespace RTYC.Designer
 		private Label label5;
 		private SegmentDisplay.Colon colon1;
 		private Button button7;
-		private Clock.FourTimeSegment fourTimeSegment1;
 		private Label label6;
+		private Clock.HourMinute hourMinute1;
+		private Clock.MinuteSecond minuteSecond1;
+		private Button button8;
+		private Label label7;
+		private Timer timer2;
+		private Clock.HourMinuteSecond hourMinuteSecond1;
+		private Button button9;
+		private Label label8;
+		private Timer timer3;
 	}
 }
 
