@@ -38,15 +38,22 @@ namespace RTYC.Designer
 			this.button9 = new System.Windows.Forms.Button();
 			this.label8 = new System.Windows.Forms.Label();
 			this.timer3 = new System.Windows.Forms.Timer(this.components);
+			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+			this.button10 = new System.Windows.Forms.Button();
+			this.button11 = new System.Windows.Forms.Button();
+			this.label9 = new System.Windows.Forms.Label();
 			this.colon1 = new RTYC.SegmentDisplay.Colon();
 			this.nine1 = new RTYC.SegmentDisplay.Nine();
 			this.eight1 = new RTYC.SegmentDisplay.Eight();
 			this.seven1 = new RTYC.SegmentDisplay.Seven();
 			this.fourteen1 = new RTYC.SegmentDisplay.Fourteen();
 			this.sixteen1 = new RTYC.SegmentDisplay.Sixteen();
+			this.timer4 = new System.Windows.Forms.Timer(this.components);
+			this.dial1 = new RTYC.Clock.Dial();
 			this.hourMinuteSecond1 = new RTYC.Clock.HourMinuteSecond();
 			this.minuteSecond1 = new RTYC.Clock.MinuteSecond();
 			this.hourMinute1 = new RTYC.Clock.HourMinute();
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// button1
@@ -244,6 +251,41 @@ namespace RTYC.Designer
 			this.timer3.Interval = 1000;
 			this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
 			// 
+			// errorProvider1
+			// 
+			this.errorProvider1.ContainerControl = this;
+			// 
+			// button10
+			// 
+			this.button10.AutoSize = true;
+			this.button10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.button10.Location = new System.Drawing.Point(24, 664);
+			this.button10.Name = "button10";
+			this.button10.Size = new System.Drawing.Size(39, 22);
+			this.button10.TabIndex = 31;
+			this.button10.Text = "Dial";
+			this.button10.UseVisualStyleBackColor = true;
+			this.button10.Click += new System.EventHandler(this.button10_Click);
+			// 
+			// button11
+			// 
+			this.button11.BackColor = System.Drawing.Color.Red;
+			this.button11.Location = new System.Drawing.Point(904, 432);
+			this.button11.Name = "button11";
+			this.button11.Size = new System.Drawing.Size(90, 91);
+			this.button11.TabIndex = 32;
+			this.button11.Text = "button11";
+			this.button11.UseVisualStyleBackColor = false;
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(69, 669);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(41, 12);
+			this.label9.TabIndex = 33;
+			this.label9.Text = "label9";
+			// 
 			// colon1
 			// 
 			this.colon1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -365,6 +407,25 @@ namespace RTYC.Designer
 			this.sixteen1.TabIndex = 11;
 			this.sixteen1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
+			// timer4
+			// 
+			this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+			// 
+			// dial1
+			// 
+			this.dial1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.dial1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.dial1.CausesValidation = false;
+			this.dial1.DisplaySecond = true;
+			this.dial1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.dial1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.dial1.Location = new System.Drawing.Point(25, 405);
+			this.dial1.Margin = new System.Windows.Forms.Padding(0);
+			this.dial1.Name = "dial1";
+			this.dial1.Size = new System.Drawing.Size(256, 256);
+			this.dial1.TabIndex = 30;
+			this.dial1.Value = new System.DateTime(((long)(0)));
+			// 
 			// hourMinuteSecond1
 			// 
 			this.hourMinuteSecond1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -415,6 +476,9 @@ namespace RTYC.Designer
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1113, 850);
+			this.Controls.Add(this.label9);
+			this.Controls.Add(this.button10);
+			this.Controls.Add(this.dial1);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.button9);
 			this.Controls.Add(this.hourMinuteSecond1);
@@ -441,9 +505,11 @@ namespace RTYC.Designer
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.sixteen1);
+			this.Controls.Add(this.button11);
 			this.Name = "WinMain";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.WinMain_Load);
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -480,6 +546,12 @@ namespace RTYC.Designer
 		private Button button9;
 		private Label label8;
 		private Timer timer3;
+		private ErrorProvider errorProvider1;
+		private Button button10;
+		private Clock.Dial dial1;
+		private Button button11;
+		private Label label9;
+		private Timer timer4;
 	}
 }
 

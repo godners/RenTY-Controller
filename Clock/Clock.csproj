@@ -41,8 +41,12 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="HourMinute.cs">
       <SubType>UserControl</SubType>
     </Compile>

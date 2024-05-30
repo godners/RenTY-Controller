@@ -43,7 +43,8 @@ namespace RTYC.Designer
 		private void Timer3_Tick (object sender, EventArgs e)
 		{ hourMinuteSecond1.Time = DateTime.Now; hourMinuteSecond1.ColonState = !hourMinuteSecond1.ColonState; label8.Text = DateTime.Now.ToString(); }
 		private void Button9_Click (object sender, EventArgs e) => timer3.Enabled = !timer3.Enabled;
+		private void timer4_Tick (object sender, EventArgs e) { dial1.Value = DateTime.Now; label9.Text = DateTime.Now.ToString(); }
+		private void button10_Click (object sender, EventArgs e) => timer4.Enabled = !timer4.Enabled;
 
-		
 	}
 }
