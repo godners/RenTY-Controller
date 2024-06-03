@@ -13,7 +13,6 @@ namespace RTYC.Clock
 	public partial class Dial : UserControl
 	{
 		#region Region - Initialize Function
-		private readonly Single Aspect = 1F;
 		private readonly Size InitSize = new Size(256, 256);
 		private readonly Padding InitPadding = new Padding(0);
 		private readonly Font InitFont = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -49,7 +48,6 @@ namespace RTYC.Clock
 		#endregion
 		#region Region - Graphics Variables
 		private Single Radius => Width / 2F;
-		private PointF CP => new PointF(Radius, Radius); // Center Point
 		private Double Angel (Single Value) => (15 - Value) * PI / 30F; // Degree To Angel
 		private Single PX (Single PointRadius, Single Value) => Convert.ToInt32(Radius + Cos(Angel(Value)) * PointRadius); // X of Point from Radius and Value
 		private Single PY (Single PointRadius, Single Value) => Convert.ToInt32(Radius - Sin(Angel(Value)) * PointRadius); // Y of Point from Radius and Value

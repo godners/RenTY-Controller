@@ -9,9 +9,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows.Forms;
 using static RTYC.SegmentDisplay.ColorTemplate;
 using static RTYC.SegmentDisplay.SegmentDisplayStyle;
+using RTYC.Clock;
 
 namespace RTYC.Designer
 {
@@ -20,31 +22,44 @@ namespace RTYC.Designer
 		public WinMain () => InitializeComponent();
 		private void WinMain_Load (Object O, EventArgs E)
 		{
-			seven1.SetColor(TemplateName.Red); eight1.SetColor(TemplateName.Green); nine1.SetColor(TemplateName.Orange);
-			fourteen1.SetColor(TemplateName.Black); sixteen1.SetColor(TemplateName.White); colon1.SetColor(TemplateName.Red);
-			hourMinute1.SetSegmentColor(TemplateName.Red); minuteSecond1.SetSegmentColor(TemplateName.Green);
-			hourMinuteSecond1.SetSegmentColor(TemplateName.Orange);
+			SV1.SetColor(TemplateName.Red); EG1.SetColor(TemplateName.Green); NN1.SetColor(TemplateName.Orange);
+			FT1.SetColor(TemplateName.Black); ST1.SetColor(TemplateName.White); CL1.SetColor(TemplateName.Red);
+			HM1.SetSegmentColor(TemplateName.Red); MS1.SetSegmentColor(TemplateName.Green);
+			HMS1.SetSegmentColor(TemplateName.Orange);
 		}
-		Int32 SD7 = 65; private void Button1_Click (Object O, EventArgs E) { label1.Text = ((WordStyle)SD7).ToString(); seven1.DrawWord((WordStyle)SD7++); }
-		Int32 SD8 = 48; Int32 SDD = 0; private void Button2_Click (Object O, EventArgs E)
-		{ label2.Text = ((WordStyle)SD8).ToString(); eight1.DrawWord((WordStyle)SD8++); eight1.DrawDot((DotStyle)(SDD == 1 ? SDD-- : SDD++)); }
-		Int32 SD9=48; private void Button3_Click (Object O, EventArgs E) { label3.Text = ((WordStyle)SD9).ToString(); nine1.DrawWord((WordStyle)SD9++); }
-		Int32 SD14 = 97; private void Button5_Click (Object O, EventArgs E)
-		{ label4.Text = ((WordStyle)SD14).ToString(); fourteen1.DrawWord((WordStyle)SD14++); }
-		Int32 SD16 = 97; private void Button6_Click (Object O, EventArgs E)
-		{ label5.Text = ((WordStyle)SD16).ToString(); sixteen1.DrawWord((WordStyle)SD16++); sixteen1.DrawDot(DotStyle.Comma); }
-		private void Button4_Click (Object O, EventArgs E) => colon1.State = !colon1.State;
-		private void Timer1_Tick (Object O, EventArgs E)
-		{ hourMinute1.Time = DateTime.Now; hourMinute1.ColonState = !hourMinute1.ColonState; label6.Text = DateTime.Now.ToString(); }
-		private void Button7_Click (Object O, EventArgs E) => timer1.Enabled = !timer1.Enabled;
-		private void Timer2_Tick (object sender, EventArgs e)
-		{ minuteSecond1.Time = DateTime.Now; minuteSecond1.ColonState = !minuteSecond1.ColonState; label7.Text = DateTime.Now.ToString(); }
-		private void Button8_Click (object sender, EventArgs e) => timer2.Enabled = !timer2.Enabled;
-		private void Timer3_Tick (object sender, EventArgs e)
-		{ hourMinuteSecond1.Time = DateTime.Now; hourMinuteSecond1.ColonState = !hourMinuteSecond1.ColonState; label8.Text = DateTime.Now.ToString(); }
-		private void Button9_Click (object sender, EventArgs e) => timer3.Enabled = !timer3.Enabled;
-		private void timer4_Tick (object sender, EventArgs e) { dial1.Value = DateTime.Now; label9.Text = DateTime.Now.ToString(); }
-		private void button10_Click (object sender, EventArgs e) => timer4.Enabled = !timer4.Enabled;
+		private DateTime DTN => DateTime.Now; private String SDTN => $"{DTN:yyyy-MM-dd HH:mm:ss.fff}";
+		private WordStyle WSV (Int32 I) => (WordStyle)I; private String WSS (Int32 I) => WSV(I).ToString();
+		private void ET (Timer T) => T.Enabled = !T.Enabled;
+		private void SetValue (Object Class, String Property, Object Value)
+		{ PropertyInfo PI = Class.GetType().GetProperty(Property); Value = Convert.ChangeType(Value, PI.PropertyType); PI.SetValue(Class, Value); }
+		private Object GetValue (Object Class, String Property)
+		{ PropertyInfo PI = Class.GetType().GetProperty(Property); return PI.GetValue(Class); }
+		private void SST (Segment S) => SetValue(S, "Time", DTN);
+		private void SAC (Segment S) => SetValue(S, "ColonState", !(Boolean)GetValue(S, "ColonState"));
+
+
+		Int32 SD7 = 65; private void B1 (Object O, EventArgs E) { L1.Text = WSS(SD7); SV1.DrawWord(WSV(SD7++)); }
+		Int32 SD8 = 48, SDD = 0; private DotStyle SDDA => (DotStyle)(SDD == 1 ? SDD-- : SDD++);
+		private void B2 (Object O, EventArgs E) { L2.Text = WSS(SD8); EG1.DrawWord(WSV(SD8++)); EG1.DrawDot(SDDA); }
+		Int32 SD9=48; private void B3 (Object O, EventArgs E) { L3.Text = WSS(SD9); NN1.DrawWord(WSV(SD9++)); }
+		Int32 SD14 = 97; private void B5 (Object O, EventArgs E) { L4.Text = WSS(SD14); FT1.DrawWord(WSV(SD14++)); }
+		Int32 SD16 = 97, SDC = 0; private DotStyle SDCA { get { if (SDC == 2) { SDC = 0; return DotStyle.Comma; } else return (DotStyle)SDC++; } }
+		private void B6 (Object O, EventArgs E) { L5.Text = WSS(SD16); ST1.DrawWord(WSV(SD16++)); ST1.DrawDot(SDCA); }
+		private void B4 (Object O, EventArgs E) => CL1.State = !CL1.State;
+		private void TM1 (Object O, EventArgs E) { SST(HM1); SAC(HM1); L6.Text = SDTN; }
+		private void B7 (Object O, EventArgs E) => ET(T1);
+		private void TM2 (Object O, EventArgs e) { SST(MS1); SAC(MS1); L7.Text = SDTN; }
+		private void B8 (Object O, EventArgs e) => ET(T2);
+		private void TM3 (Object O, EventArgs e) { SST(HMS1); SAC(HMS1); L8.Text = SDTN; }
+		private void B9 (Object O, EventArgs e) => ET(T3);
+
+		private void B11 (object sender, EventArgs e) => asC161.Word = "a";
+		
+
+		private void TM4 (Object O, EventArgs e) { DL1.Value = DTN; L9.Text = SDTN; }
+		private void B10 (Object O, EventArgs e) => ET(T4);
+
+
 
 	}
 }

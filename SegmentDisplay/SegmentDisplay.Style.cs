@@ -7,9 +7,71 @@ namespace RTYC.SegmentDisplay
 	{
 		/// <summary>Word Style</summary>
 		public enum WordStyle
-		{ 
+		{
 			/// <summary>None</summary>
 			None = 0,
+			/// <summary>Start Of Heading - SOH</summary>
+			SOH = 1,
+			/// <summary>Start Of Text - STX </summary>
+			STX = 2,
+			/// <summary>End Of Text - ETX </summary>
+			ETX = 3,
+			/// <summary>End Of Transmission - EOT </summary>
+			EOT = 4,
+			/// <summary>Enquiry - ENQ </summary>
+			ENQ = 5,
+			/// <summary>Acknowledge - ACK </summary>
+			ACK = 6,
+			/// <summary>Bell - BEL </summary>
+			BEL = 7,
+			/// <summary>Backspace - BS </summary>
+			BS = 8,
+			/// <summary>Horizontal Tab - HT </summary>
+			HT = 9,
+			/// <summary>Line Feed/New Line - LF/NL</summary>
+			LF_NL = 10,
+			/// <summary>Vertical Tab - VT </summary>
+			VT = 11,
+			/// <summary>Form Feed/New Page - FF/NP </summary>
+			FF_NP = 12,
+			/// <summary>Carriage Return - CR </summary>
+			CR = 13,
+			/// <summary>Shift Out - SO </summary>
+			SO = 14,
+			/// <summary>Shift In - SI </summary>
+			SI = 15,
+			/// <summary>Data Link Escape - DLE </summary>
+			DLE = 16,
+			/// <summary>Device Control 1/Transmission On - DC1/XON</summary>
+			DC1_XON = 17,
+			/// <summary>Device Control 2 - DC2</summary>
+			DC2 = 18,
+			/// <summary>Device Control 3/Transmission Off - DC3/XOFF</summary>
+			DC3_XOFF = 19,
+			/// <summary>Device Control 4 - DC4 </summary>
+			DC4 = 20,
+			/// <summary>Negative Acknowledge - NAK </summary>
+			NAK = 21,
+			/// <summary>Synchronous Idle - SYN </summary>
+			SYN = 22,
+			/// <summary>End of Transmission Block - ETB </summary>
+			ETB = 23,
+			/// <summary>Cancel - CAN </summary>
+			CAN = 24,
+			/// <summary>End of Medium - EM </summary>
+			EM = 25,
+			/// <summary>Substitute - SUB </summary>
+			SUB = 26,
+			/// <summary>Escape - ESC </summary>
+			ESC = 27,
+			/// <summary>File Separator - FS </summary>
+			FS = 28,
+			/// <summary>Group Separator - GS </summary>
+			GS = 29,
+			/// <summary>Record Separator - RS </summary>
+			RS = 30,
+			/// <summary>Unit Separator - US </summary>
+			US = 31,
 			/// <summary>Space</summary>
 			Space = 32,
 			/// <summary>Exclamatory - !</summary>
@@ -199,7 +261,9 @@ namespace RTYC.SegmentDisplay
 			/// <summary>Right Curly Bracket - }</summary>
 			RightCurlyBracket = 125,
 			/// <summary>Tilde - ~</summary>
-			Tilde = 126
+			Tilde = 126,
+			/// <summary>Delete - DEL</summary>
+			DEL = 127
 		}
 		/// <summary>Dot Style</summary>
 		public enum DotStyle

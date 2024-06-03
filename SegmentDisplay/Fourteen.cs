@@ -50,7 +50,14 @@ namespace RTYC.SegmentDisplay
 			{ WordStyle.i, 4617 }, { WordStyle.j, 30 }, { WordStyle.k, 9328 }, { WordStyle.l, 56 }, { WordStyle.m, 1334 }, { WordStyle.n, 8502 },
 			{ WordStyle.o, 63 }, { WordStyle.p, 243 }, { WordStyle.q, 8255 }, { WordStyle.r, 8435 }, { WordStyle.s, 397 }, { WordStyle.t, 4609 },
 			{ WordStyle.u, 62 }, { WordStyle.v, 3120 }, { WordStyle.w, 10294 }, { WordStyle.x, 11520 }, { WordStyle.y, 5376 }, { WordStyle.z, 3081 },
-			{ WordStyle.LeftCurlyBracket, 0 }, { WordStyle.Vertical, 4608 }, { WordStyle.RightCurlyBracket, 0 }, { WordStyle.Tilde, 0 }
+			{ WordStyle.LeftCurlyBracket, 0 }, { WordStyle.Vertical, 4608 }, { WordStyle.RightCurlyBracket, 0 }, { WordStyle.Tilde, 0 },
+
+			{ WordStyle.SOH, 0 }, { WordStyle.STX, 0 }, { WordStyle.ETX, 0 }, { WordStyle.EOT, 0 }, { WordStyle.ENQ, 0 }, { WordStyle.ACK, 0 },
+			{ WordStyle.BEL, 0 }, { WordStyle.BS, 0 }, { WordStyle.HT, 0 }, { WordStyle.LF_NL, 0 }, { WordStyle.VT, 0 }, { WordStyle.FF_NP, 0 },
+			{ WordStyle.CR, 0 }, { WordStyle.SO, 0 }, { WordStyle.SI, 0 }, { WordStyle.DLE, 0 }, { WordStyle.DC1_XON, 0 }, { WordStyle.DC2, 0 },
+			{ WordStyle.DC3_XOFF, 0 }, { WordStyle.DC4, 0 }, { WordStyle.NAK, 0 }, { WordStyle.SYN, 0 }, { WordStyle.ETB, 0 }, { WordStyle.CAN, 0 },
+			{ WordStyle.EM, 0 }, { WordStyle.SUB, 0 }, { WordStyle.ESC, 0 }, { WordStyle.FS, 0 }, { WordStyle.GS, 0 }, { WordStyle.RS, 0 },
+			{ WordStyle.US, 0 }, { WordStyle.DEL, 0 }
 		};
 		private protected override Dictionary<Byte, Region> SymbolRegion => SREmpty;
 		private protected override Dictionary<DotStyle, Byte> DotMapping => DMEmpty;

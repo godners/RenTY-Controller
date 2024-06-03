@@ -96,6 +96,10 @@
       <Project>{BDFA650B-EDC3-49BE-A812-996F57FB42A3}</Project>
       <Name>Clock</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MatrixDisplay\MatrixDisplay.csproj">
+      <Project>{1B6F1CE9-1E74-44FF-8E4A-86581977EC9A}</Project>
+      <Name>MatrixDisplay</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SegmentDisplay\SegmentDisplay.csproj">
       <Project>{0aff0282-2c80-436e-bb91-dd587160c85b}</Project>
       <Name>SegmentDisplay</Name>

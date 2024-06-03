@@ -22,37 +22,38 @@ namespace RTYC.Designer
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
-			this.timer1 = new System.Windows.Forms.Timer(this.components);
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
+			this.T1 = new System.Windows.Forms.Timer(this.components);
+			this.L1 = new System.Windows.Forms.Label();
+			this.L2 = new System.Windows.Forms.Label();
+			this.L3 = new System.Windows.Forms.Label();
 			this.button5 = new System.Windows.Forms.Button();
-			this.label4 = new System.Windows.Forms.Label();
+			this.L4 = new System.Windows.Forms.Label();
 			this.button6 = new System.Windows.Forms.Button();
-			this.label5 = new System.Windows.Forms.Label();
+			this.L5 = new System.Windows.Forms.Label();
 			this.button7 = new System.Windows.Forms.Button();
-			this.label6 = new System.Windows.Forms.Label();
+			this.L6 = new System.Windows.Forms.Label();
 			this.button8 = new System.Windows.Forms.Button();
-			this.label7 = new System.Windows.Forms.Label();
-			this.timer2 = new System.Windows.Forms.Timer(this.components);
+			this.L7 = new System.Windows.Forms.Label();
+			this.T2 = new System.Windows.Forms.Timer(this.components);
 			this.button9 = new System.Windows.Forms.Button();
-			this.label8 = new System.Windows.Forms.Label();
-			this.timer3 = new System.Windows.Forms.Timer(this.components);
+			this.L8 = new System.Windows.Forms.Label();
+			this.T3 = new System.Windows.Forms.Timer(this.components);
 			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
 			this.button10 = new System.Windows.Forms.Button();
 			this.button11 = new System.Windows.Forms.Button();
-			this.label9 = new System.Windows.Forms.Label();
-			this.colon1 = new RTYC.SegmentDisplay.Colon();
-			this.nine1 = new RTYC.SegmentDisplay.Nine();
-			this.eight1 = new RTYC.SegmentDisplay.Eight();
-			this.seven1 = new RTYC.SegmentDisplay.Seven();
-			this.fourteen1 = new RTYC.SegmentDisplay.Fourteen();
-			this.sixteen1 = new RTYC.SegmentDisplay.Sixteen();
-			this.timer4 = new System.Windows.Forms.Timer(this.components);
-			this.dial1 = new RTYC.Clock.Dial();
-			this.hourMinuteSecond1 = new RTYC.Clock.HourMinuteSecond();
-			this.minuteSecond1 = new RTYC.Clock.MinuteSecond();
-			this.hourMinute1 = new RTYC.Clock.HourMinute();
+			this.L9 = new System.Windows.Forms.Label();
+			this.CL1 = new RTYC.SegmentDisplay.Colon();
+			this.NN1 = new RTYC.SegmentDisplay.Nine();
+			this.EG1 = new RTYC.SegmentDisplay.Eight();
+			this.SV1 = new RTYC.SegmentDisplay.Seven();
+			this.FT1 = new RTYC.SegmentDisplay.Fourteen();
+			this.ST1 = new RTYC.SegmentDisplay.Sixteen();
+			this.T4 = new System.Windows.Forms.Timer(this.components);
+			this.DL1 = new RTYC.Clock.Dial();
+			this.HMS1 = new RTYC.Clock.HourMinuteSecond();
+			this.MS1 = new RTYC.Clock.MinuteSecond();
+			this.HM1 = new RTYC.Clock.HourMinute();
+			this.asC161 = new RTYC.MatrixDisplay.ASC16TEST();
 			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -66,7 +67,7 @@ namespace RTYC.Designer
 			this.button1.TabIndex = 1;
 			this.button1.Text = "7";
 			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.Button1_Click);
+			this.button1.Click += new System.EventHandler(this.B1);
 			// 
 			// button2
 			// 
@@ -78,7 +79,7 @@ namespace RTYC.Designer
 			this.button2.TabIndex = 3;
 			this.button2.Text = "8";
 			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.Button2_Click);
+			this.button2.Click += new System.EventHandler(this.B2);
 			// 
 			// button3
 			// 
@@ -90,7 +91,7 @@ namespace RTYC.Designer
 			this.button3.TabIndex = 5;
 			this.button3.Text = "9";
 			this.button3.UseVisualStyleBackColor = true;
-			this.button3.Click += new System.EventHandler(this.Button3_Click);
+			this.button3.Click += new System.EventHandler(this.B3);
 			// 
 			// button4
 			// 
@@ -102,39 +103,39 @@ namespace RTYC.Designer
 			this.button4.TabIndex = 6;
 			this.button4.Text = ":";
 			this.button4.UseVisualStyleBackColor = true;
-			this.button4.Click += new System.EventHandler(this.Button4_Click);
+			this.button4.Click += new System.EventHandler(this.B4);
 			// 
-			// timer1
+			// T1
 			// 
-			this.timer1.Interval = 1000;
-			this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+			this.T1.Interval = 1000;
+			this.T1.Tick += new System.EventHandler(this.TM1);
 			// 
-			// label1
+			// L1
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(52, 257);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(41, 12);
-			this.label1.TabIndex = 7;
-			this.label1.Text = "label1";
+			this.L1.AutoSize = true;
+			this.L1.Location = new System.Drawing.Point(52, 257);
+			this.L1.Name = "L1";
+			this.L1.Size = new System.Drawing.Size(41, 12);
+			this.L1.TabIndex = 7;
+			this.L1.Text = "label1";
 			// 
-			// label2
+			// L2
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(172, 257);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(41, 12);
-			this.label2.TabIndex = 8;
-			this.label2.Text = "label2";
+			this.L2.AutoSize = true;
+			this.L2.Location = new System.Drawing.Point(172, 257);
+			this.L2.Name = "L2";
+			this.L2.Size = new System.Drawing.Size(41, 12);
+			this.L2.TabIndex = 8;
+			this.L2.Text = "label2";
 			// 
-			// label3
+			// L3
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(322, 257);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(41, 12);
-			this.label3.TabIndex = 9;
-			this.label3.Text = "label3";
+			this.L3.AutoSize = true;
+			this.L3.Location = new System.Drawing.Point(322, 257);
+			this.L3.Name = "L3";
+			this.L3.Size = new System.Drawing.Size(41, 12);
+			this.L3.TabIndex = 9;
+			this.L3.Text = "label3";
 			// 
 			// button5
 			// 
@@ -146,16 +147,16 @@ namespace RTYC.Designer
 			this.button5.TabIndex = 11;
 			this.button5.Text = "14";
 			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.Button5_Click);
+			this.button5.Click += new System.EventHandler(this.B5);
 			// 
-			// label4
+			// L4
 			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(448, 257);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(41, 12);
-			this.label4.TabIndex = 12;
-			this.label4.Text = "label4";
+			this.L4.AutoSize = true;
+			this.L4.Location = new System.Drawing.Point(448, 257);
+			this.L4.Name = "L4";
+			this.L4.Size = new System.Drawing.Size(41, 12);
+			this.L4.TabIndex = 12;
+			this.L4.Text = "label4";
 			// 
 			// button6
 			// 
@@ -167,16 +168,16 @@ namespace RTYC.Designer
 			this.button6.TabIndex = 16;
 			this.button6.Text = "16";
 			this.button6.UseVisualStyleBackColor = true;
-			this.button6.Click += new System.EventHandler(this.Button6_Click);
+			this.button6.Click += new System.EventHandler(this.B6);
 			// 
-			// label5
+			// L5
 			// 
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(598, 257);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(41, 12);
-			this.label5.TabIndex = 17;
-			this.label5.Text = "label5";
+			this.L5.AutoSize = true;
+			this.L5.Location = new System.Drawing.Point(598, 257);
+			this.L5.Name = "L5";
+			this.L5.Size = new System.Drawing.Size(41, 12);
+			this.L5.TabIndex = 17;
+			this.L5.Text = "label5";
 			// 
 			// button7
 			// 
@@ -188,16 +189,16 @@ namespace RTYC.Designer
 			this.button7.TabIndex = 20;
 			this.button7.Text = "HM";
 			this.button7.UseVisualStyleBackColor = true;
-			this.button7.Click += new System.EventHandler(this.Button7_Click);
+			this.button7.Click += new System.EventHandler(this.B7);
 			// 
-			// label6
+			// L6
 			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(58, 385);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(41, 12);
-			this.label6.TabIndex = 22;
-			this.label6.Text = "label6";
+			this.L6.AutoSize = true;
+			this.L6.Location = new System.Drawing.Point(58, 385);
+			this.L6.Name = "L6";
+			this.L6.Size = new System.Drawing.Size(41, 12);
+			this.L6.TabIndex = 22;
+			this.L6.Text = "label6";
 			// 
 			// button8
 			// 
@@ -209,21 +210,21 @@ namespace RTYC.Designer
 			this.button8.TabIndex = 25;
 			this.button8.Text = "MS";
 			this.button8.UseVisualStyleBackColor = true;
-			this.button8.Click += new System.EventHandler(this.Button8_Click);
+			this.button8.Click += new System.EventHandler(this.B8);
 			// 
-			// label7
+			// L7
 			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(328, 385);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(41, 12);
-			this.label7.TabIndex = 26;
-			this.label7.Text = "label7";
+			this.L7.AutoSize = true;
+			this.L7.Location = new System.Drawing.Point(328, 385);
+			this.L7.Name = "L7";
+			this.L7.Size = new System.Drawing.Size(41, 12);
+			this.L7.TabIndex = 26;
+			this.L7.Text = "label7";
 			// 
-			// timer2
+			// T2
 			// 
-			this.timer2.Interval = 1000;
-			this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
+			this.T2.Interval = 1000;
+			this.T2.Tick += new System.EventHandler(this.TM2);
 			// 
 			// button9
 			// 
@@ -235,21 +236,21 @@ namespace RTYC.Designer
 			this.button9.TabIndex = 28;
 			this.button9.Text = "HMS";
 			this.button9.UseVisualStyleBackColor = true;
-			this.button9.Click += new System.EventHandler(this.Button9_Click);
+			this.button9.Click += new System.EventHandler(this.B9);
 			// 
-			// label8
+			// L8
 			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(588, 385);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(41, 12);
-			this.label8.TabIndex = 29;
-			this.label8.Text = "label8";
+			this.L8.AutoSize = true;
+			this.L8.Location = new System.Drawing.Point(588, 385);
+			this.L8.Name = "L8";
+			this.L8.Size = new System.Drawing.Size(41, 12);
+			this.L8.TabIndex = 29;
+			this.L8.Text = "label8";
 			// 
-			// timer3
+			// T3
 			// 
-			this.timer3.Interval = 1000;
-			this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
+			this.T3.Interval = 1000;
+			this.T3.Tick += new System.EventHandler(this.TM3);
 			// 
 			// errorProvider1
 			// 
@@ -265,246 +266,263 @@ namespace RTYC.Designer
 			this.button10.TabIndex = 31;
 			this.button10.Text = "Dial";
 			this.button10.UseVisualStyleBackColor = true;
-			this.button10.Click += new System.EventHandler(this.button10_Click);
+			this.button10.Click += new System.EventHandler(this.B10);
 			// 
 			// button11
 			// 
 			this.button11.BackColor = System.Drawing.Color.Red;
-			this.button11.Location = new System.Drawing.Point(904, 432);
+			this.button11.Location = new System.Drawing.Point(429, 449);
 			this.button11.Name = "button11";
 			this.button11.Size = new System.Drawing.Size(90, 91);
 			this.button11.TabIndex = 32;
 			this.button11.Text = "button11";
 			this.button11.UseVisualStyleBackColor = false;
+			this.button11.Click += new System.EventHandler(this.B11);
 			// 
-			// label9
+			// L9
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(69, 669);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(41, 12);
-			this.label9.TabIndex = 33;
-			this.label9.Text = "label9";
+			this.L9.AutoSize = true;
+			this.L9.Location = new System.Drawing.Point(69, 669);
+			this.L9.Name = "L9";
+			this.L9.Size = new System.Drawing.Size(41, 12);
+			this.L9.TabIndex = 33;
+			this.L9.Text = "label9";
 			// 
-			// colon1
+			// CL1
 			// 
-			this.colon1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.colon1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.colon1.BackColor = System.Drawing.SystemColors.Control;
-			this.colon1.CausesValidation = false;
-			this.colon1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
-			this.colon1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.colon1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.colon1.GroundColor = System.Drawing.SystemColors.Control;
-			this.colon1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.colon1.Location = new System.Drawing.Point(745, 49);
-			this.colon1.Margin = new System.Windows.Forms.Padding(0);
-			this.colon1.Name = "colon1";
-			this.colon1.OffColor = System.Drawing.SystemColors.Control;
-			this.colon1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.colon1.Size = new System.Drawing.Size(25, 200);
-			this.colon1.State = false;
-			this.colon1.TabIndex = 18;
-			this.colon1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
+			this.CL1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.CL1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.CL1.BackColor = System.Drawing.SystemColors.Control;
+			this.CL1.CausesValidation = false;
+			this.CL1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.CL1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.CL1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.CL1.GroundColor = System.Drawing.SystemColors.Control;
+			this.CL1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.CL1.Location = new System.Drawing.Point(745, 49);
+			this.CL1.Margin = new System.Windows.Forms.Padding(0);
+			this.CL1.Name = "CL1";
+			this.CL1.OffColor = System.Drawing.SystemColors.Control;
+			this.CL1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.CL1.Size = new System.Drawing.Size(25, 200);
+			this.CL1.State = false;
+			this.CL1.TabIndex = 18;
+			this.CL1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
-			// nine1
+			// NN1
 			// 
-			this.nine1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.nine1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.nine1.BackColor = System.Drawing.SystemColors.Control;
-			this.nine1.CausesValidation = false;
-			this.nine1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
-			this.nine1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.nine1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.nine1.GroundColor = System.Drawing.SystemColors.Control;
-			this.nine1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.nine1.Location = new System.Drawing.Point(295, 49);
-			this.nine1.Margin = new System.Windows.Forms.Padding(0);
-			this.nine1.Name = "nine1";
-			this.nine1.OffColor = System.Drawing.SystemColors.Control;
-			this.nine1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.nine1.Size = new System.Drawing.Size(120, 200);
-			this.nine1.TabIndex = 15;
-			this.nine1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
+			this.NN1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.NN1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.NN1.BackColor = System.Drawing.SystemColors.Control;
+			this.NN1.CausesValidation = false;
+			this.NN1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.NN1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.NN1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.NN1.GroundColor = System.Drawing.SystemColors.Control;
+			this.NN1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.NN1.Location = new System.Drawing.Point(295, 49);
+			this.NN1.Margin = new System.Windows.Forms.Padding(0);
+			this.NN1.Name = "NN1";
+			this.NN1.OffColor = System.Drawing.SystemColors.Control;
+			this.NN1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.NN1.Size = new System.Drawing.Size(120, 200);
+			this.NN1.TabIndex = 15;
+			this.NN1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
-			// eight1
+			// EG1
 			// 
-			this.eight1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.eight1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.eight1.BackColor = System.Drawing.SystemColors.Control;
-			this.eight1.CausesValidation = false;
-			this.eight1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
-			this.eight1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.eight1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.eight1.GroundColor = System.Drawing.SystemColors.Control;
-			this.eight1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.eight1.Location = new System.Drawing.Point(145, 49);
-			this.eight1.Margin = new System.Windows.Forms.Padding(0);
-			this.eight1.Name = "eight1";
-			this.eight1.OffColor = System.Drawing.SystemColors.Control;
-			this.eight1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.eight1.Size = new System.Drawing.Size(150, 200);
-			this.eight1.TabIndex = 14;
-			this.eight1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
+			this.EG1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.EG1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.EG1.BackColor = System.Drawing.SystemColors.Control;
+			this.EG1.CausesValidation = false;
+			this.EG1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.EG1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.EG1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.EG1.GroundColor = System.Drawing.SystemColors.Control;
+			this.EG1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.EG1.Location = new System.Drawing.Point(145, 49);
+			this.EG1.Margin = new System.Windows.Forms.Padding(0);
+			this.EG1.Name = "EG1";
+			this.EG1.OffColor = System.Drawing.SystemColors.Control;
+			this.EG1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.EG1.Size = new System.Drawing.Size(150, 200);
+			this.EG1.TabIndex = 14;
+			this.EG1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
-			// seven1
+			// SV1
 			// 
-			this.seven1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.seven1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.seven1.BackColor = System.Drawing.SystemColors.Control;
-			this.seven1.CausesValidation = false;
-			this.seven1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
-			this.seven1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.seven1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.seven1.GroundColor = System.Drawing.SystemColors.Control;
-			this.seven1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.seven1.Location = new System.Drawing.Point(25, 49);
-			this.seven1.Margin = new System.Windows.Forms.Padding(0);
-			this.seven1.Name = "seven1";
-			this.seven1.OffColor = System.Drawing.SystemColors.Control;
-			this.seven1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.seven1.Size = new System.Drawing.Size(120, 200);
-			this.seven1.TabIndex = 13;
-			this.seven1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
+			this.SV1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.SV1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.SV1.BackColor = System.Drawing.SystemColors.Control;
+			this.SV1.CausesValidation = false;
+			this.SV1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.SV1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.SV1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.SV1.GroundColor = System.Drawing.SystemColors.Control;
+			this.SV1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.SV1.Location = new System.Drawing.Point(25, 49);
+			this.SV1.Margin = new System.Windows.Forms.Padding(0);
+			this.SV1.Name = "SV1";
+			this.SV1.OffColor = System.Drawing.SystemColors.Control;
+			this.SV1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.SV1.Size = new System.Drawing.Size(120, 200);
+			this.SV1.TabIndex = 13;
+			this.SV1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
-			// fourteen1
+			// FT1
 			// 
-			this.fourteen1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.fourteen1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.fourteen1.BackColor = System.Drawing.SystemColors.Control;
-			this.fourteen1.CausesValidation = false;
-			this.fourteen1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
-			this.fourteen1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.fourteen1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.fourteen1.GroundColor = System.Drawing.SystemColors.Control;
-			this.fourteen1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.fourteen1.Location = new System.Drawing.Point(415, 49);
-			this.fourteen1.Margin = new System.Windows.Forms.Padding(0);
-			this.fourteen1.Name = "fourteen1";
-			this.fourteen1.OffColor = System.Drawing.SystemColors.Control;
-			this.fourteen1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.fourteen1.Size = new System.Drawing.Size(150, 200);
-			this.fourteen1.TabIndex = 10;
-			this.fourteen1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
+			this.FT1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.FT1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.FT1.BackColor = System.Drawing.SystemColors.Control;
+			this.FT1.CausesValidation = false;
+			this.FT1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.FT1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.FT1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.FT1.GroundColor = System.Drawing.SystemColors.Control;
+			this.FT1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.FT1.Location = new System.Drawing.Point(415, 49);
+			this.FT1.Margin = new System.Windows.Forms.Padding(0);
+			this.FT1.Name = "FT1";
+			this.FT1.OffColor = System.Drawing.SystemColors.Control;
+			this.FT1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.FT1.Size = new System.Drawing.Size(150, 200);
+			this.FT1.TabIndex = 10;
+			this.FT1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
-			// sixteen1
+			// ST1
 			// 
-			this.sixteen1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.sixteen1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.sixteen1.BackColor = System.Drawing.SystemColors.Control;
-			this.sixteen1.CausesValidation = false;
-			this.sixteen1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
-			this.sixteen1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.sixteen1.ForeColor = System.Drawing.SystemColors.ControlText;
-			this.sixteen1.GroundColor = System.Drawing.SystemColors.Control;
-			this.sixteen1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.sixteen1.Location = new System.Drawing.Point(565, 49);
-			this.sixteen1.Margin = new System.Windows.Forms.Padding(0);
-			this.sixteen1.Name = "sixteen1";
-			this.sixteen1.OffColor = System.Drawing.SystemColors.Control;
-			this.sixteen1.OnColor = System.Drawing.SystemColors.ControlText;
-			this.sixteen1.Size = new System.Drawing.Size(180, 200);
-			this.sixteen1.TabIndex = 11;
-			this.sixteen1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
+			this.ST1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.ST1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.ST1.BackColor = System.Drawing.SystemColors.Control;
+			this.ST1.CausesValidation = false;
+			this.ST1.Dot = RTYC.SegmentDisplay.SegmentDisplayStyle.DotStyle.None;
+			this.ST1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.ST1.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.ST1.GroundColor = System.Drawing.SystemColors.Control;
+			this.ST1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.ST1.Location = new System.Drawing.Point(565, 49);
+			this.ST1.Margin = new System.Windows.Forms.Padding(0);
+			this.ST1.Name = "ST1";
+			this.ST1.OffColor = System.Drawing.SystemColors.Control;
+			this.ST1.OnColor = System.Drawing.SystemColors.ControlText;
+			this.ST1.Size = new System.Drawing.Size(180, 200);
+			this.ST1.TabIndex = 11;
+			this.ST1.Word = RTYC.SegmentDisplay.SegmentDisplayStyle.WordStyle.None;
 			// 
-			// timer4
+			// T4
 			// 
-			this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+			this.T4.Tick += new System.EventHandler(this.TM4);
 			// 
-			// dial1
+			// DL1
 			// 
-			this.dial1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.dial1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.dial1.CausesValidation = false;
-			this.dial1.DisplaySecond = true;
-			this.dial1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.dial1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.dial1.Location = new System.Drawing.Point(25, 405);
-			this.dial1.Margin = new System.Windows.Forms.Padding(0);
-			this.dial1.Name = "dial1";
-			this.dial1.Size = new System.Drawing.Size(256, 256);
-			this.dial1.TabIndex = 30;
-			this.dial1.Value = new System.DateTime(((long)(0)));
+			this.DL1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.DL1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.DL1.CausesValidation = false;
+			this.DL1.DisplaySecond = true;
+			this.DL1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.DL1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.DL1.Location = new System.Drawing.Point(25, 405);
+			this.DL1.Margin = new System.Windows.Forms.Padding(0);
+			this.DL1.Name = "DL1";
+			this.DL1.Size = new System.Drawing.Size(256, 256);
+			this.DL1.TabIndex = 30;
+			this.DL1.Value = new System.DateTime(((long)(0)));
 			// 
-			// hourMinuteSecond1
+			// HMS1
 			// 
-			this.hourMinuteSecond1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.hourMinuteSecond1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.hourMinuteSecond1.CausesValidation = false;
-			this.hourMinuteSecond1.ColonState = true;
-			this.hourMinuteSecond1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.hourMinuteSecond1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.hourMinuteSecond1.Location = new System.Drawing.Point(549, 277);
-			this.hourMinuteSecond1.Margin = new System.Windows.Forms.Padding(0);
-			this.hourMinuteSecond1.Name = "hourMinuteSecond1";
-			this.hourMinuteSecond1.Size = new System.Drawing.Size(398, 100);
-			this.hourMinuteSecond1.TabIndex = 27;
-			this.hourMinuteSecond1.Time = new System.DateTime(((long)(0)));
+			this.HMS1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.HMS1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.HMS1.CausesValidation = false;
+			this.HMS1.ColonState = true;
+			this.HMS1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.HMS1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.HMS1.Location = new System.Drawing.Point(549, 277);
+			this.HMS1.Margin = new System.Windows.Forms.Padding(0);
+			this.HMS1.Name = "HMS1";
+			this.HMS1.Size = new System.Drawing.Size(398, 100);
+			this.HMS1.TabIndex = 27;
+			this.HMS1.Time = new System.DateTime(((long)(0)));
 			// 
-			// minuteSecond1
+			// MS1
 			// 
-			this.minuteSecond1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.minuteSecond1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.minuteSecond1.CausesValidation = false;
-			this.minuteSecond1.ColonState = true;
-			this.minuteSecond1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.minuteSecond1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.minuteSecond1.Location = new System.Drawing.Point(287, 277);
-			this.minuteSecond1.Margin = new System.Windows.Forms.Padding(0);
-			this.minuteSecond1.Name = "minuteSecond1";
-			this.minuteSecond1.Size = new System.Drawing.Size(262, 100);
-			this.minuteSecond1.TabIndex = 24;
-			this.minuteSecond1.Time = new System.DateTime(((long)(0)));
+			this.MS1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.MS1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.MS1.CausesValidation = false;
+			this.MS1.ColonState = true;
+			this.MS1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.MS1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.MS1.Location = new System.Drawing.Point(287, 277);
+			this.MS1.Margin = new System.Windows.Forms.Padding(0);
+			this.MS1.Name = "MS1";
+			this.MS1.Size = new System.Drawing.Size(262, 100);
+			this.MS1.TabIndex = 24;
+			this.MS1.Time = new System.DateTime(((long)(0)));
 			// 
-			// hourMinute1
+			// HM1
 			// 
-			this.hourMinute1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.hourMinute1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-			this.hourMinute1.CausesValidation = false;
-			this.hourMinute1.ColonState = true;
-			this.hourMinute1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.hourMinute1.ImeMode = System.Windows.Forms.ImeMode.Disable;
-			this.hourMinute1.Location = new System.Drawing.Point(25, 277);
-			this.hourMinute1.Margin = new System.Windows.Forms.Padding(0);
-			this.hourMinute1.Name = "hourMinute1";
-			this.hourMinute1.Size = new System.Drawing.Size(262, 100);
-			this.hourMinute1.TabIndex = 23;
-			this.hourMinute1.Time = new System.DateTime(((long)(0)));
+			this.HM1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.HM1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.HM1.CausesValidation = false;
+			this.HM1.ColonState = true;
+			this.HM1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.HM1.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.HM1.Location = new System.Drawing.Point(25, 277);
+			this.HM1.Margin = new System.Windows.Forms.Padding(0);
+			this.HM1.Name = "HM1";
+			this.HM1.Size = new System.Drawing.Size(262, 100);
+			this.HM1.TabIndex = 23;
+			this.HM1.Time = new System.DateTime(((long)(0)));
+			// 
+			// asC161
+			// 
+			this.asC161.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.asC161.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+			this.asC161.CausesValidation = false;
+			this.asC161.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.asC161.ImeMode = System.Windows.Forms.ImeMode.Disable;
+			this.asC161.Location = new System.Drawing.Point(324, 435);
+			this.asC161.Margin = new System.Windows.Forms.Padding(0);
+			this.asC161.Name = "asC161";
+			this.asC161.Size = new System.Drawing.Size(60, 120);
+			this.asC161.Style = RTYC.MatrixDisplay.MatrixDisplayStyle.PixelStyle.Rectangle;
+			this.asC161.TabIndex = 34;
+			this.asC161.Word = " ";
 			// 
 			// WinMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1113, 850);
-			this.Controls.Add(this.label9);
+			this.Controls.Add(this.asC161);
+			this.Controls.Add(this.L9);
 			this.Controls.Add(this.button10);
-			this.Controls.Add(this.dial1);
-			this.Controls.Add(this.label8);
+			this.Controls.Add(this.DL1);
+			this.Controls.Add(this.L8);
 			this.Controls.Add(this.button9);
-			this.Controls.Add(this.hourMinuteSecond1);
-			this.Controls.Add(this.label7);
+			this.Controls.Add(this.HMS1);
+			this.Controls.Add(this.L7);
 			this.Controls.Add(this.button8);
-			this.Controls.Add(this.minuteSecond1);
-			this.Controls.Add(this.hourMinute1);
-			this.Controls.Add(this.label6);
+			this.Controls.Add(this.MS1);
+			this.Controls.Add(this.HM1);
+			this.Controls.Add(this.L6);
 			this.Controls.Add(this.button7);
-			this.Controls.Add(this.colon1);
-			this.Controls.Add(this.label5);
+			this.Controls.Add(this.CL1);
+			this.Controls.Add(this.L5);
 			this.Controls.Add(this.button6);
-			this.Controls.Add(this.nine1);
-			this.Controls.Add(this.eight1);
-			this.Controls.Add(this.seven1);
-			this.Controls.Add(this.label4);
+			this.Controls.Add(this.NN1);
+			this.Controls.Add(this.EG1);
+			this.Controls.Add(this.SV1);
+			this.Controls.Add(this.L4);
 			this.Controls.Add(this.button5);
-			this.Controls.Add(this.fourteen1);
-			this.Controls.Add(this.label3);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.FT1);
+			this.Controls.Add(this.L3);
+			this.Controls.Add(this.L2);
+			this.Controls.Add(this.L1);
 			this.Controls.Add(this.button4);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.sixteen1);
+			this.Controls.Add(this.ST1);
 			this.Controls.Add(this.button11);
 			this.Name = "WinMain";
 			this.Text = "Form1";
@@ -520,38 +538,39 @@ namespace RTYC.Designer
 		private Button button2;
 		private Button button3;
 		private Button button4;
-		private Timer timer1;
+		private Timer T1;
 		private IContainer components;
-		private Label label1;
-		private Label label2;
-		private Label label3;
-		private SegmentDisplay.Fourteen fourteen1;
+		private Label L1;
+		private Label L2;
+		private Label L3;
+		private SegmentDisplay.Fourteen FT1;
 		private Button button5;
-		private Label label4;
-		private SegmentDisplay.Seven seven1;
-		private SegmentDisplay.Eight eight1;
-		private SegmentDisplay.Nine nine1;
-		private SegmentDisplay.Sixteen sixteen1;
+		private Label L4;
+		private SegmentDisplay.Seven SV1;
+		private SegmentDisplay.Eight EG1;
+		private SegmentDisplay.Nine NN1;
+		private SegmentDisplay.Sixteen ST1;
 		private Button button6;
-		private Label label5;
-		private SegmentDisplay.Colon colon1;
+		private Label L5;
+		private SegmentDisplay.Colon CL1;
 		private Button button7;
-		private Label label6;
-		private Clock.HourMinute hourMinute1;
-		private Clock.MinuteSecond minuteSecond1;
+		private Label L6;
+		private Clock.HourMinute HM1;
+		private Clock.MinuteSecond MS1;
 		private Button button8;
-		private Label label7;
-		private Timer timer2;
-		private Clock.HourMinuteSecond hourMinuteSecond1;
+		private Label L7;
+		private Timer T2;
+		private Clock.HourMinuteSecond HMS1;
 		private Button button9;
-		private Label label8;
-		private Timer timer3;
+		private Label L8;
+		private Timer T3;
 		private ErrorProvider errorProvider1;
 		private Button button10;
-		private Clock.Dial dial1;
+		private Clock.Dial DL1;
 		private Button button11;
-		private Label label9;
-		private Timer timer4;
+		private Label L9;
+		private Timer T4;
+		private MatrixDisplay.ASC16TEST asC161;
 	}
 }
 

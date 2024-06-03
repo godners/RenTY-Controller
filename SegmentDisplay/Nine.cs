@@ -45,7 +45,14 @@ namespace RTYC.SegmentDisplay
 			{ WordStyle.i, 0 }, { WordStyle.j, 0 }, { WordStyle.k, 0 }, { WordStyle.l, 0 }, { WordStyle.m, 0 }, { WordStyle.n, 0 },
 			{ WordStyle.o, 0 }, { WordStyle.p, 0 }, { WordStyle.q, 0 }, { WordStyle.r, 0 }, { WordStyle.s, 0 }, { WordStyle.t, 0 },
 			{ WordStyle.u, 0 }, { WordStyle.v, 0 }, { WordStyle.w, 0 }, { WordStyle.x, 0 }, { WordStyle.y, 0 }, { WordStyle.z, 0 },
-			{ WordStyle.LeftCurlyBracket, 0 }, { WordStyle.Vertical, 0 }, { WordStyle.RightCurlyBracket, 0 }, { WordStyle.Tilde, 0 }
+			{ WordStyle.LeftCurlyBracket, 0 }, { WordStyle.Vertical, 0 }, { WordStyle.RightCurlyBracket, 0 }, { WordStyle.Tilde, 0 },
+
+			{ WordStyle.SOH, 0 }, { WordStyle.STX, 0 }, { WordStyle.ETX, 0 }, { WordStyle.EOT, 0 }, { WordStyle.ENQ, 0 }, { WordStyle.ACK, 0 },
+			{ WordStyle.BEL, 0 }, { WordStyle.BS, 0 }, { WordStyle.HT, 0 }, { WordStyle.LF_NL, 0 }, { WordStyle.VT, 0 }, { WordStyle.FF_NP, 0 },
+			{ WordStyle.CR, 0 }, { WordStyle.SO, 0 }, { WordStyle.SI, 0 }, { WordStyle.DLE, 0 }, { WordStyle.DC1_XON, 0 }, { WordStyle.DC2, 0 },
+			{ WordStyle.DC3_XOFF, 0 }, { WordStyle.DC4, 0 }, { WordStyle.NAK, 0 }, { WordStyle.SYN, 0 }, { WordStyle.ETB, 0 }, { WordStyle.CAN, 0 },
+			{ WordStyle.EM, 0 }, { WordStyle.SUB, 0 }, { WordStyle.ESC, 0 }, { WordStyle.FS, 0 }, { WordStyle.GS, 0 }, { WordStyle.RS, 0 },
+			{ WordStyle.US, 0 }, { WordStyle.DEL, 0 }
 		};
 		private protected override Dictionary<Byte, Region> SymbolRegion => SREmpty;
 		private protected override Dictionary<DotStyle, Byte> DotMapping => DMEmpty;
